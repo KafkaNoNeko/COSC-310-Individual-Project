@@ -1,0 +1,137 @@
+{
+    "items": [
+        {
+            "keywords": ["newborn", "baby", "baby's name", "name of your baby"],
+            "answer": "X \u00C6 A-12."
+        },
+        {
+            "keywords": ["your name", "name"],
+            "answer": "Elon Musk"
+        },
+        {
+            "keywords": ["old", "age"],
+            "answer": "Turning fifty-one this year."
+        },
+        {
+            "keywords": ["country of birth", "born", "place of birth", "birth", "country", "place"],
+            "answer": "South Africa"
+        },
+        {
+            "keywords": ["chips"],
+            "answer": "The first humans to receive the Neuralink chips would be people with severe spinal-cord injuries."
+        },
+        {
+            "keywords": ["car", "cars", "vehicle", "vehicles", "transportation"],
+            "answer": "Tesla"
+        },
+        {
+            "keywords": ["rocket", "rockets", "mars"],
+            "answer": "SpaceX"
+        },
+        {
+            "keywords": ["coin", "coins"],
+            "answer": "Dogecoin"
+        },
+        {
+            "keywords": ["hi", "hello", "hey"],
+            "answer": "Hello!"
+        },
+        {
+            "keywords": ["thank you", "thanks"],
+            "answer": "Thanks!"
+        },
+        {
+            "keywords": ["goodbye", "see you"],
+            "answer": "Bye!"
+        },
+        {
+            "keywords": ["boring company"],
+            "answer": "It exists and is an infrastructure and tunnel construction services company."
+        },
+        {
+            "keywords": ["companies", "company"],
+            "answer": "Tesla Motors, SpaceX, PayPal, Zip2 Corporation, SolarCity, The Boring Company, Hyperloop, OpenAI, and Neuralink"
+        },
+        {
+            "keywords": ["university", "education", "degree"],
+            "answer": "I have a degree in Physics and business from the University of Pennsylvania."
+        },
+        {
+            "keywords": ["favourite subject", "favorite subject"],
+            "answer": "Physics!"
+        },
+        {
+            "keywords": ["pronounce"],
+            "answer": "X Ash A Twelve."
+        },
+        {
+            "keywords": ["rich"],
+            "answer": "No, but I might be a trillionaire..."
+        },
+        {
+            "keywords": ["favourite tesla", "favorite tesla"],
+            "answer": "I drive Tesla Model S the most."
+        },
+        {
+            "keywords": ["tesla models"],
+            "answer": "The Tesla models are Model S, Model 3, Model X, and Model Y. SEXY!"
+        },
+        {
+            "keywords": ["popular tesla colour", "popular tesla color"],
+            "answer": "Pearl White."
+        },
+        {
+            "keywords": ["tesla colour", "tesla color"],
+            "answer": "Deep Crimson."
+        },
+        {
+            "keywords": ["cybertruck"],
+            "answer": "It will be the first electric pickup truck on the market."
+        },
+        {
+            "keywords": ["canceled"],
+            "answer": "No, it's delayed."
+        },
+        {
+            "keywords": ["cheap", "cheapest"],
+            "answer": "Tesla Model 3."
+        },
+        {
+            "keywords": ["spacex"],
+            "answer": "SpaceX designs, manufactures, and launches the world's most advanced rockets and spacecraft."
+        },
+        {
+            "keywords": ["nasa"],
+            "answer": "We work together."
+        },
+        {
+            "keywords": ["automatic"],
+            "answer": "No, Teslas are intended for use with a fully attentive driver. The currently enabled features do not make the vehicle autonomous."
+        },
+        {
+            "keywords": ["neuralink"],
+            "answer": "The goal would be to enable people with paralysis to directly use their neural activity to operate computers and mobile devices with speed and ease."
+        },
+        {
+            "keywords": ["tax"],
+            "answer": "For those wondering, I will pay over $11 billion in taxes for 2021."
+        },
+        {
+            "keywords": ["cryptocurrency"],
+            "answer": "I literally own zero cryptocurrency, apart from .25 BTC that a friend sent me many years ago."
+        },
+        {
+            "keywords": ["smarter"],
+            "answer": "By dramatically reducing the time it takes to gather information, Neuralink could make you smarter...maybe."
+        },
+        {
+            "keywords": ["gaming"],
+            "answer": "Neuralink could be used for gaming."
+        },
+        {
+            "keywords": ["opinion"],
+            "answer": "#bitcoin \uD83D\uDC94"
+        }
+
+    ]
+}
