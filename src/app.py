@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 
 import yaml
-
-from app import chat_bot_response
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+
+from utils.handle_messages import chat_bot_response
 
 
 with open("env.yaml", "r") as env_file:
     ENV_VARIABLES = yaml.safe_load(env_file)
     TOKEN = ENV_VARIABLES["TOKEN"]
+
 
 def start(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
@@ -18,6 +19,7 @@ def start(update: Update, context: CallbackContext) -> None:
         fr'Hi {user.mention_markdown_v2()}\!',
         reply_markup=ForceReply(selective=True),
     )
+
 
 def handle_message(update: Update, context: CallbackContext) -> None:
     """Handle the user message."""
@@ -29,7 +31,7 @@ def handle_message(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater(TOKEN)
+    updater = Updater(TOKEN, use_context=True)
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
@@ -38,7 +40,8 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
 
     # On every other message  - handle the message answering content about Elon Musk
-    dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+    dispatcher.add_handler(MessageHandler(
+        Filters.text & ~Filters.command, handle_message))
 
     # Start the Bot
     updater.start_polling()
