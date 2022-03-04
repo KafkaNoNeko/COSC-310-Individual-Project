@@ -14,12 +14,6 @@ To launch the Elon Musk bot, first [install Python](https://realpython.com/insta
 pip install -r requirements.txt
 ```
 
-After `pip` has finished installing the requirements, run:
-
-```
-python app.py
-```
-
 ## Creating your own Telegram bot based on this code
 
 To create your own Telegram bot, first go to https://t.me/botfather. Send the following message to Botfather:
