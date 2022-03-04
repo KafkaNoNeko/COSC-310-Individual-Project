@@ -3,7 +3,7 @@ import json
 
 # This function is used to handle the chatbot response
 def chat_bot_response(user_input: str) -> str:
-    with open(os.path.join(os.path.dirname(__file__), "..", "static", "json", "data.json"), "r") as f:
+    with open(os.path.join(os.path.dirname(__file__), "..", "..", "static", "json", "data.json"), "r") as f:
         data = json.load(f)
     
     max_item = {
