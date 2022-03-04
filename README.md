@@ -53,7 +53,7 @@ pip install -r requirements.txt
 Then, run the Telegram bot:
 
 ```
-python elon_musk_bot.py
+python src/app.py
 ```
 
 Lastly, go to t.me/LINK_TO_YOUR_BOT (the link you obtained from Botfather) and chat with the bot! 
