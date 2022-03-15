@@ -1,4 +1,4 @@
-# Elon Musk Bot ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54) ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=logo=telegram&logoColor=white) ![Dialogflow](https://img.shields.io/badge/Dialogflow-%23000.svg?logo=flask&logoColor=white)
+# Elon Musk Bot ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54) ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white) ![Dialogflow](https://img.shields.io/badge/Dialogflow-orange.svg?logo=dialogflow&logoColor=white)
 
 <p align="center"> 
 <img width="620" height="414" src="static/img/ElonMusk.png">
