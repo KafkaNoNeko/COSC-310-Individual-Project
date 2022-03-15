@@ -10,13 +10,25 @@ Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Mus
 
 The bot is available at https://t.me/COSC310_ElonMusk_Dialogflow_bot
 
+## Executing Tests
+
+To execute the tests, run:
+
+```
+python -m unittest discover tests
+```
 ## Code Structure
 
 ```
     .
-    ├── elonmusk/main.py          # Code for the Python back-end - it handles requests to the bot
-    ├── tests                     # Tests for the bot
-    └── README.md                 # This file!
+    ├── elonmusk                      # Code for the Python back-end
+    │   ├── main.py                   # Entrypoint for Cloud Function
+    │   ├── intent_handlers.py        # Logic for each Intent (i.e. Topic) Elon can talk about
+    ├── tests                         # Tests for the bot
+    │   ├── data                      # Raw data from Dialogflow after Intent and Entity matching
+    │   ├── test_what_company.py      # Elon can answer about his companies
+    │   ├── mock_dialogflow_utils.py  # Utilities for writing tests
+    └── README.md                     # This file!
 ```
 
 ## Built With
