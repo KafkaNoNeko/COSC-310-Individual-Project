@@ -1,0 +1,44 @@
+{
+    "responseId": "4090f7c9-ecc4-40ef-b010-82c96b863c15-40ef389b",
+    "queryResult": {
+      "queryText": "Tell me more about SpaceX",
+      "parameters": {
+        "Companies": "SpaceX"
+      },
+      "allRequiredParamsPresent": true,
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "Hello from What Company Intent"
+            ]
+          }
+        }
+      ],
+      "outputContexts": [
+        {
+          "name": "projects/cosc310-a3/agent/sessions/4fae2f73-0434-2a6e-d039-b5a4aa4042f3/contexts/companiesintent-followup",
+          "lifespanCount": 5,
+          "parameters": {
+            "Companies": "SpaceX",
+            "Companies.original": "SpaceX"
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/cosc310-a3/agent/intents/cd6a9105-bfa7-4050-b245-b41eaa633c53",
+        "displayName": "What Company Does Intent"
+      },
+      "intentDetectionConfidence": 1,
+      "diagnosticInfo": {
+        "webhook_latency_ms": 48
+      },
+      "languageCode": "en",
+      "sentimentAnalysisResult": {
+        "queryTextSentiment": {}
+      }
+    },
+    "webhookStatus": {
+      "message": "Webhook execution successful"
+    }
+  }

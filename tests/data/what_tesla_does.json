@@ -1,0 +1,44 @@
+{
+  "responseId": "99d81c5e-3e62-45f0-8a2d-bcf442c12c92-40ef389b",
+  "queryResult": {
+    "queryText": "What does Tesla do?",
+    "parameters": {
+      "Companies": "Tesla"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Hello from What Company Intent"
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/cosc310-a3/agent/sessions/4fae2f73-0434-2a6e-d039-b5a4aa4042f3/contexts/companiesintent-followup",
+        "lifespanCount": 5,
+        "parameters": {
+          "Companies.original": "Tesla",
+          "Companies": "Tesla"
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/cd6a9105-bfa7-4050-b245-b41eaa633c53",
+      "displayName": "What Company Does Intent"
+    },
+    "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 46
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {}
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}
