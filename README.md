@@ -12,7 +12,13 @@ The bot is available at https://t.me/COSC310_ElonMusk_Dialogflow_bot
 
 ## Executing Tests
 
-To execute the tests, run:
+[Install Python](https://realpython.com/installing-python/) on your machine and ensure you have the dependencies installed with:
+
+```
+pip install -r requirements.txt
+```
+
+To execute the tests, run the following command at the root of the repository:
 
 ```
 python -m unittest discover tests
