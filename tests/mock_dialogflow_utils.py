@@ -12,11 +12,13 @@ class MockRequest:
 
 def get_json_test_data(name):
     path_to_json = os.path.join(
-        os.path.dirname(__file__), "..", "data", f"{name}.json"
+        os.path.dirname(__file__), "data", f"{name}.json"
     )
     json_file = open(path_to_json)
 
-    return json.load(json_file)
+    json_content = json.load(json_file)
+    json_file.close()
+    return json_content
 
 def get_test_request(name):
     data = get_json_test_data(name)
