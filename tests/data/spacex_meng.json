@@ -1,0 +1,42 @@
+{
+  "responseId": "ba667e2e-b384-4c8e-8af2-b3b09ae64289-e5ce3fa9",
+  "queryResult": {
+    "queryText": "I would like to be a Mechanical Engineer",
+    "action": "input.unknown",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "I didn't get that. Can you repeat?",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "I didn't get that. Can you repeat?"
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/__system_counters__",
+        "lifespanCount": 1,
+        "parameters": {
+          "no-input": 0,
+          "no-match": 8
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/fb83ba9e-8df5-41b3-af21-c97635f4e588",
+      "displayName": "Default Fallback Intent",
+      "isFallback": true
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": 0.2,
+        "magnitude": 0.2
+      }
+    }
+  }
+}
