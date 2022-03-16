@@ -1,0 +1,39 @@
+{
+  "responseId": "449f6dc8-494a-4bed-ab0c-b972a65e0271-e5ce3fa9",
+  "queryResult": {
+    "queryText": "I would like to be a Software Engineer",
+    "action": "input.unknown",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "Sorry, could you say that again?",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Sorry, could you say that again?"
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/__system_counters__",
+        "lifespanCount": 1,
+        "parameters": {
+          "no-match": 6,
+          "no-input": 0
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/fb83ba9e-8df5-41b3-af21-c97635f4e588",
+      "displayName": "Default Fallback Intent",
+      "isFallback": true
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {}
+    }
+  }
+}
