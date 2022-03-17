@@ -1,0 +1,17 @@
+on: push
+
+name: Run tests for Elon Musk bot
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+          python-interpreter: "python3"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover tests
