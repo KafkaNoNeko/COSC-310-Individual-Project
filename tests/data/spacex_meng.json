@@ -1,42 +1,53 @@
 {
-  "responseId": "ba667e2e-b384-4c8e-8af2-b3b09ae64289-e5ce3fa9",
+  "responseId": "8d96e7ce-1e36-4623-af01-25ffb33cf4ad-e5ce3fa9",
   "queryResult": {
-    "queryText": "I would like to be a Mechanical Engineer",
-    "action": "input.unknown",
-    "parameters": {},
+    "queryText": "I want to work as a Mechanical Engineer",
+    "action": "WorkatSpaceXIntent.WorkatSpaceXIntent-custom",
+    "parameters": {
+      "position": "Mechanical Engineer",
+      "work": "Work"
+    },
     "allRequiredParamsPresent": true,
-    "fulfillmentText": "I didn't get that. Can you repeat?",
     "fulfillmentMessages": [
       {
         "text": {
           "text": [
-            "I didn't get that. Can you repeat?"
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
           ]
         }
       }
     ],
     "outputContexts": [
       {
-        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/__system_counters__",
+        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/workatspacexintent-followup",
         "lifespanCount": 1,
         "parameters": {
-          "no-input": 0,
-          "no-match": 8
+          "companies.original": "SpaceX",
+          "position.original": "Mechanical Engineer",
+          "work.original": "work",
+          "companies": "SpaceX",
+          "work": "Work",
+          "position": "Mechanical Engineer"
         }
       }
     ],
     "intent": {
-      "name": "projects/cosc310-a3/agent/intents/fb83ba9e-8df5-41b3-af21-c97635f4e588",
-      "displayName": "Default Fallback Intent",
-      "isFallback": true
+      "name": "projects/cosc310-a3/agent/intents/c0ef5b8d-2e3b-4c58-b46c-cd398d148fd8",
+      "displayName": "Work at SpaceX Intent - custom"
     },
     "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 58
+    },
     "languageCode": "en",
     "sentimentAnalysisResult": {
       "queryTextSentiment": {
-        "score": 0.2,
-        "magnitude": 0.2
+        "score": 0.1,
+        "magnitude": 0.1
       }
     }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
   }
 }
