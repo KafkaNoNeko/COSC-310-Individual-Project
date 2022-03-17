@@ -118,3 +118,33 @@ def handle_crypto_advice_intent(query_result):
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
 
+def handle_what_is_crypto_intent(query_result):
+    """Returns list of text messages for the What is Crypto Intent"""
+    print(f"DEBUG: What is Crypto Intent")
+
+    try:
+        crypto = query_result["parameters"]["crypto"]
+
+        if crypto == "dogecoin":
+            return [
+                """The point is that dogecoin was invented as a joke, essentially to make fun of cryptocurrency. 
+                Fate loves irony. The currency that started as a joke in fact becomes the real currency. To the moon!"""
+            ]
+        elif crypto == "portfolio":
+            return [
+                """A cryptocurrency portfolio is a means to manage your inventory of online currency investments. 
+                It can be hosted on a cryptocurrency management software that helps you track each coin's performance 
+                and provides you with analytical tools.
+                """
+            ]
+        elif crypto == "NFT":
+            return [
+                """NFTs are unique cryptographic tokens that exist on a blockchain and cannot be replicated."""
+            ]
+        else:
+            return ["""It is any form of currency that exists virtually and uses cryptography to secure transactions. 
+                    Cryptocurrencies don't have a central issuing or regulating authority. 
+                    Instead, they use a decentralized system to record transactions and issue new units."""]
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
