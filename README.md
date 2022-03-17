@@ -41,7 +41,14 @@ python -m unittest discover tests
 
 ### GUI Improvements
 
-We used the platform of telegram as a way of giving a face to our bot, byincorporating the already popular and polished platform were able to vastly improve on the GUI of the systrm and user experience as well as a platform for the user to reference ast interactions.
+We use Telegram's user interface as a way of giving a face to our bot. By incorporating the already popular and polished platform were able to vastly improve on the GUI. 
+
+The bot is available at https://t.me/COSC310_ElonMusk_Dialogflow_bot, and users can talk to the bot in any platform that Telegram 
+is supported. For example, on Android the interface looks like:
+
+<p align="center"> 
+<img width="800" height="600" src="static/img/GUI.png">
+</p>
 
 ### Improvements using language toolkits
 
@@ -60,13 +67,13 @@ In order for Dialogflow to do Sentiment Analysis, we provided it with training p
 provide Dialogflow with sentences such as "Tell me more about SpaceX" and annotate that SpaceX is an entity of the type "Company".
 
 <p align="center"> 
-<img width="1252" height="213" src="static/img/SentimentAnalysisTraining.png">
+<img width="800" height="600" src="static/img/SentimentAnalysisTraining.png">
 </p>
 
 If we provide enough training sentences, Dialogflow detects the sentiment correctly. We reinforce that the training set does not need to be extensive to detect the sentiment, take for example the following conversation:
 
 <p align="center"> 
-<img width="1252" height="213" src="static/img/SentimentAnalysisChat.png">
+<img width="800" height="600" src="static/img/SentimentAnalysisChat.png">
 </p>
 
 Dialogflow can answer about Tesla even though the training sentence is "Tell me more about SpaceX". It can also generalize 
