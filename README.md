@@ -69,7 +69,7 @@ Inside each entity we defined, we provided the items we want to detect. For exam
 seen in the previous chat, we created the "Models" entity:
 
 <p align="center"> 
-<img width="800" height="600" src="static/img/ModelsExample.png">
+<img width="800" height="400" src="static/img/ModelsExample.png">
 </p>
 
 #### Sentiment analysis (2 points)
@@ -115,7 +115,12 @@ We have expanded the topics Elon Musk bot can talk about. The current list is:
 
 ### Out of Scope Responses (0.5 points)
 
-TODO
+We created an Out of Scope intent in Dialogflow. When Sentiment Analysis cannot match a sentence to an existing intent, we send one predefined responses using Elon's sarcasm. Take a look at the example chat where we greet Elon in French and ask if he speaks French:
+
+<p align="center"> 
+<img width="800" height="600" src="static/img/OutOfScope.png">
+</p>
+
 
 ### Github Repo with commit history
 
