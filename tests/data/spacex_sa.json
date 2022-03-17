@@ -1,39 +1,50 @@
 {
-  "responseId": "19226610-e586-485a-995c-c53bc093a82e-e5ce3fa9",
+  "responseId": "63e575e2-5529-4d5b-90af-1e4cefe473aa-e5ce3fa9",
   "queryResult": {
-    "queryText": "I would like to be a Structural Analyst",
-    "action": "input.unknown",
-    "parameters": {},
+    "queryText": "I want to work as a Structural Analyst",
+    "action": "WorkatSpaceXIntent.WorkatSpaceXIntent-custom",
+    "parameters": {
+      "work": "Work",
+      "position": "Structural Analyst"
+    },
     "allRequiredParamsPresent": true,
-    "fulfillmentText": "I missed that, say that again?",
     "fulfillmentMessages": [
       {
         "text": {
           "text": [
-            "I missed that, say that again?"
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
           ]
         }
       }
     ],
     "outputContexts": [
       {
-        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/__system_counters__",
+        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/workatspacexintent-followup",
         "lifespanCount": 1,
         "parameters": {
-          "no-input": 0,
-          "no-match": 4
+          "work.original": "work",
+          "position.original": "Structural Analyst",
+          "companies.original": "SpaceX",
+          "position": "Structural Analyst",
+          "companies": "SpaceX",
+          "work": "Work"
         }
       }
     ],
     "intent": {
-      "name": "projects/cosc310-a3/agent/intents/fb83ba9e-8df5-41b3-af21-c97635f4e588",
-      "displayName": "Default Fallback Intent",
-      "isFallback": true
+      "name": "projects/cosc310-a3/agent/intents/c0ef5b8d-2e3b-4c58-b46c-cd398d148fd8",
+      "displayName": "Work at SpaceX Intent - custom"
     },
     "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 76
+    },
     "languageCode": "en",
     "sentimentAnalysisResult": {
       "queryTextSentiment": {}
     }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
   }
 }

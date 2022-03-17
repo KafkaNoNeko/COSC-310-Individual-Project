@@ -62,7 +62,7 @@ def handle_WorkatSpaceXIntent_followup(query_result):
             ]
         elif position == "Web Developer":
             return [
-                """As a web developer, you will shape user-centric products that are critical to our core messaging at SpaceX, 
+                """As a Web Developer, you will shape user-centric products that are critical to our core messaging at SpaceX, 
                 as well as the development and execution of our broadband satellite network Starlink."""
             ]
         elif position == "Electrical Engineer":
