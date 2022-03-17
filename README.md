@@ -47,7 +47,7 @@ The bot is available at https://t.me/COSC310_ElonMusk_Dialogflow_bot, and users 
 is supported. For example, on Android the interface looks like:
 
 <p align="center"> 
-<img width="800" height="600" src="static/img/GUI.png">
+<img width="400" height="800" src="static/img/GUI.png">
 </p>
 
 ### Improvements using language toolkits
