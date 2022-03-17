@@ -17,7 +17,7 @@ class TestWhatIsCrypto(unittest.TestCase):
         app = Flask(__name__)
 
         with app.app_context():
-            test_dogecoin = get_test_request("What_is_special_about_doge")
+            test_dogecoin = get_test_request("what_dogecoin")
             response = cloud_function(test_dogecoin)
             result = json.loads(response.get_data(as_text=True))
 
@@ -30,7 +30,7 @@ class TestWhatIsCrypto(unittest.TestCase):
         app = Flask(__name__)
 
         with app.app_context():
-            test_portfolio = get_test_request("What_does_portfolio_do")
+            test_portfolio = get_test_request("what_portfolio")
             response = cloud_function(test_portfolio)
             result = json.loads(response.get_data(as_text=True))
 
@@ -38,17 +38,17 @@ class TestWhatIsCrypto(unittest.TestCase):
                 "portfolio" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
-    def test_what_NTF(self):
+    def test_what_NFT(self):
         """Test that question about portfolio has portfolio in answer"""
         app = Flask(__name__)
 
         with app.app_context():
-            test_NTF = get_test_request("What_is_NTF")
-            response = cloud_function(test_NTF)
+            test_NFT = get_test_request("what_NFT")
+            response = cloud_function(test_NFT)
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
-                "test_NTF" in result["fulfillmentMessages"][0]["text"]["text"][0]
+                "test_NFT" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
 if __name__ == "__main__":

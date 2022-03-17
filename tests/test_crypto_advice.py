@@ -17,7 +17,7 @@ class TestCryptoAdvice(unittest.TestCase):
         app = Flask(__name__)
 
         with app.app_context():
-            test_dogecoin = get_test_request("Is_it_time_to_buy_doge")
+            test_dogecoin = get_test_request("advice_dogecoin")
             response = cloud_function(test_dogecoin)
             result = json.loads(response.get_data(as_text=True))
 
@@ -30,7 +30,7 @@ class TestCryptoAdvice(unittest.TestCase):
         app = Flask(__name__)
 
         with app.app_context():
-            test_portfolio = get_test_request("Should_I_get_a_portfolio")
+            test_portfolio = get_test_request("advice_portfolio")
             response = cloud_function(test_portfolio)
             result = json.loads(response.get_data(as_text=True))
 
@@ -43,7 +43,7 @@ class TestCryptoAdvice(unittest.TestCase):
         app = Flask(__name__)
 
         with app.app_context():
-            test_crypto = get_test_request("Should_I_start_investing_in_crypto")
+            test_crypto = get_test_request("advice_crypto")
             response = cloud_function(test_crypto)
             result = json.loads(response.get_data(as_text=True))
 
