@@ -10,7 +10,7 @@ from tests.mock_dialogflow_utils import *
 
 from elonmusk.main import cloud_function
 
-class TestWorkAtSpaceX(unittest.TestCase):
+class TestWhatIsCrypto(unittest.TestCase):
 
     def test_dogecoin(self):
         """Test that question about dogecoin has dogecoin in answer"""
