@@ -12,7 +12,7 @@ from elonmusk.main import cloud_function
 
 class TestBillionaireTax(unittest.TestCase):
 
-    def test_2021(self):
+    def test_tax2021(self):
         """Test that question about dogecoin has dogecoin in answer"""
         app = Flask(__name__)
 
@@ -25,7 +25,7 @@ class TestBillionaireTax(unittest.TestCase):
                 "2021" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
-    def test_2018(self):
+    def test_tax2018(self):
         """Test that question about portfolio has portfolio in answer"""
         app = Flask(__name__)
 
