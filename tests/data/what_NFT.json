@@ -1,0 +1,53 @@
+{
+  "responseId": "783db387-9d0e-431e-a63a-781c6a09a13a-e5ce3fa9",
+  "queryResult": {
+    "queryText": "What is NFT",
+    "parameters": {
+      "crypto": [
+        "NFT"
+      ]
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "It is any form of currency that exists digitally or virtually and uses cryptography to secure transactions. Cryptocurrencies don't have a central issuing or regulating authority. Instead, they use a decentralized system to record transactions and issue new units.",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/cosc310-a3/agent/sessions/2be9ab31-a37c-87a9-f17f-ab7ace068a4b/contexts/__system_counters__",
+        "lifespanCount": 1,
+        "parameters": {
+          "crypto.original": [
+            "NFT"
+          ],
+          "crypto": [
+            "NFT"
+          ],
+          "no-match": 0,
+          "no-input": 0
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/33d43c07-e2bb-45c0-82a4-51ed3c28197e",
+      "displayName": "What is Crypto Intent"
+    },
+    "intentDetectionConfidence": 0.77263284,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 34
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {}
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}
