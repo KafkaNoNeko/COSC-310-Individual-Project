@@ -45,16 +45,41 @@ We used the platform of telegram as a way of giving a face to our bot, byincorpo
 
 ### Improvements using language toolkits
 
-* **Synonym Recognition**: By being able to recognize common synonyms used by the user, the bot is a able to respond to a wider amount of inpputs and the user experiecne is enriched as they get a greater freedom when it comes to choosing how they phrase their question. This allows them to have a more natural conversation with the bot. as seen below, we are able to use red in place of crimson and the bot can still provide an accurate answer
-    <p align="center"> 
-    <img width="1252" height="214" src="static/img/synonym.png">
-    </p>
-* **Entity analysis**: By enabling the bot to pick out proper nouns used in the conversation we are abke to improve the accuracy of the bot's responses by guaging the topic of conversation quicker than earlier. Thereby we save the user fom having to repeat themselves and improve their overall experience. as seen below, the bot is able to understand Tesla and Model S as entities.
+#### Entity analysis
+
+By enabling the bot to pick out proper nouns used in the conversation we are abke to improve the accuracy of the bot's responses by guaging the topic of conversation quicker than earlier. Thereby we save the user fom having to repeat themselves and improve their overall experience. as seen below, the bot is able to understand Tesla and Model S as entities.
     <p align="center"> 
     <img width="1252" height="213" src="static/img/entity.png">
     </p>
-* **Sentiment analysis**: With the help of dialogflow's sentimental analysis capabilities we are able to look beyond what the user is saying and try and respond closer to what they mean. Ideally, this gives our bot a more human touch and as a result improves user interation and experience.
-  **add snippet**
+
+#### Sentiment analysis 
+
+We are able to analyse to beyond just the individual words the user is saying with Dialogflow. That happens with Sentiment Analysis, which in Dialogflow is also called Intent Analysis.
+
+In order for Dialogflow to do Sentiment Analysis, we provided it with training phrases. For example, to talk about companies we
+provide Dialogflow with sentences such as "Tell me more about SpaceX" and annotate that SpaceX is an entity of the type "Company".
+
+<p align="center"> 
+<img width="1252" height="213" src="static/img/SentimentAnalysisTraining.png">
+</p>
+
+If we provide enough training sentences, Dialogflow detects the sentiment correctly. We reinforce that the training set does not need to be extensive to detect the sentiment, take for example the following conversation:
+
+<p align="center"> 
+<img width="1252" height="213" src="static/img/SentimentAnalysisChat.png">
+</p>
+
+Dialogflow can answer about Tesla even though the training sentence is "Tell me more about SpaceX". It can also generalize 
+sentiment analysis to words it has never seen. "Elucidate" never appeared on the training set, and our bot still answered the question
+correctly. Lastly, Sentinment Analysis is not based only on Entity Analysis: if we ask "I want to work at SpaceX", the bot detects
+a different intent and talks about the positions available.
+
+#### Synonym Recognition
+
+By being able to recognize common synonyms used by the user, the bot is a able to respond to a wider amount of inpputs and the user experiecne is enriched as they get a greater freedom when it comes to choosing how they phrase their question. This allows them to have a more natural conversation with the bot. as seen below, we are able to use red in place of crimson and the bot can still provide an accurate answer
+    <p align="center"> 
+    <img width="1252" height="214" src="static/img/synonym.png">
+    </p>
 
 ### Github Repo with commit history
 
