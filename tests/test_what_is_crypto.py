@@ -12,7 +12,7 @@ from elonmusk.main import cloud_function
 
 class TestWhatIsCrypto(unittest.TestCase):
 
-    def test_dogecoin(self):
+    def test_what_dogecoin(self):
         """Test that question about dogecoin has dogecoin in answer"""
         app = Flask(__name__)
 
@@ -25,7 +25,7 @@ class TestWhatIsCrypto(unittest.TestCase):
                 "dogecoin" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
-    def test_portfolio(self):
+    def test_what_portfolio(self):
         """Test that question about portfolio has portfolio in answer"""
         app = Flask(__name__)
 
@@ -38,7 +38,7 @@ class TestWhatIsCrypto(unittest.TestCase):
                 "portfolio" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
-    def test_NTF(self):
+    def test_what_NTF(self):
         """Test that question about portfolio has portfolio in answer"""
         app = Flask(__name__)
 
