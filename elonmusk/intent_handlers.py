@@ -148,3 +148,22 @@ def handle_what_is_crypto_intent(query_result):
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
 
+def handle_billionaire_tax_intent(query_result):
+    """Returns list of text messages for the Billionaire Tax Intent"""
+    print(f"DEBUG: Billionaire Tax Intent")
+
+    try:
+        crypto = query_result["parameters"]["Tax"]
+
+        if crypto == "2021":
+            return [
+                """I will pay more taxes than any American in history in 2021."""
+            ]
+        elif crypto == "2018":
+            return [
+                """That’s a funny joke."""
+            ]
+        else:
+            return ["""My wealth ‘isn’t some deep mystery. My taxes are super simple, and I pay them."""]
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]

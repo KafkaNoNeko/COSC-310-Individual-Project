@@ -18,7 +18,7 @@ def cloud_function(request):
         "Work at SpaceX Intent - custom": handle_WorkatSpaceXIntent_followup,
         "Crypto Advice Intent": handle_crypto_advice_intent,
         "What is Crypto Intent": handle_what_is_crypto_intent,
-
+        "Billionaire Tax Intent": handle_billionaire_tax_intent,
     }
 
     try:
