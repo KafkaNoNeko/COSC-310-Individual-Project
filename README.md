@@ -118,7 +118,7 @@ We have expanded the topics Elon Musk bot can talk about. The current list is:
 We created an Out of Scope intent in Dialogflow. When Sentiment Analysis cannot match a sentence to an existing intent, we send one predefined responses using Elon's sarcasm. Take a look at the example chat where we greet Elon in French and ask if he speaks French:
 
 <p align="center"> 
-<img width="800" height="600" src="static/img/OutOfScope.png">
+<img width="800" height="400" src="static/img/OutOfScope.png">
 </p>
 
 
