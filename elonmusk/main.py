@@ -15,7 +15,9 @@ def cloud_function(request):
     
     intent_dictionary = {
         "What Company Does Intent": handle_what_company_intent,
-        "Work at SpaceX Intent - custom": handle_WorkatSpaceXIntent_followup
+        "Work at SpaceX Intent - custom": handle_WorkatSpaceXIntent_followup,
+        "Crypto Advice Intent": handle_crypto_advice_intent,
+
     }
 
     try:

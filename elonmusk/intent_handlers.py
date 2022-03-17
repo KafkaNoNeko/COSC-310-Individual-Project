@@ -86,3 +86,35 @@ def handle_WorkatSpaceXIntent_followup(query_result):
             return ["Sorry, I don't remember what the detailed job description is! Check it out here: www.spacex.com/careers/"]
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
+
+def handle_crypto_advice_intent(query_result):
+    """Returns list of text messages for the Crypto Advice Intent"""
+    print(f"DEBUG: Crypto Advice Intent")
+
+    try:
+        crypto = query_result["parameters"]["crypto"]
+
+        if crypto == "dogecoin":
+            return [
+                """I don’t particularly support any crypto except dogecoin for a reason. 
+                Lots of people I talked to on the production lines at Tesla or building rockets at SpaceX own Doge. 
+                They aren’t financial experts or Silicon Valley technologists. 
+                That’s why I decided to support Doge — it felt like the people’s crypto."""
+            ]
+        elif crypto == "crypto":
+            return [
+                """Don’t bet the farm on crypto! 
+                True value is building products & providing services to your fellow human beings, not money in any form.
+                """
+            ]
+        elif crypto == "portfolio":
+            return [
+                """That will reduce the risk if one or more  perform poorly, but cryptos are high in risk itself. 
+                The cryptos I am holding are limited to Bitcoin, Ethereum and Dogecoin."""
+            ]
+        else:
+            return [ f'Check my tweets about {crypto}, you\'ll find the answer !']
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
