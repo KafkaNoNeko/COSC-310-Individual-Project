@@ -39,7 +39,7 @@ python -m unittest discover tests
 
 ## Features added in Assignment 3
 
-### GUI Improvements
+### GUI Improvements (1 point)
 
 We use Telegram's user interface as a way of giving a face to our bot. By incorporating the already popular and polished platform were able to vastly improve on the GUI. 
 
@@ -52,7 +52,7 @@ is supported. For example, on Android the interface looks like:
 
 ### Improvements using language toolkits
 
-#### Entity analysis
+#### Entity analysis (2 points)
 
 By enabling the bot to pick out proper nouns used in the conversation we are able to improve the accuracy of the bot's responses by guaging the topic of conversation quicker than earlier. Thereby we save the user fom having to repeat themselves and improve their overall experience. as seen below, the bot is able to understand Tesla and Model S as entities.
     <p align="center"> 
@@ -72,7 +72,7 @@ seen in the previous chat, we created the "Models" entity:
 <img width="800" height="600" src="static/img/ModelsExample.png">
 </p>
 
-#### Sentiment analysis 
+#### Sentiment analysis (2 points)
 
 We are able to analyse to beyond just the individual words the user is saying with Dialogflow. That happens with Sentiment Analysis, which in Dialogflow is also called Intent Analysis.
 
@@ -94,12 +94,28 @@ sentiment analysis to words it has never seen. "Elucidate" never appeared on the
 correctly. Lastly, Sentinment Analysis is not based only on Entity Analysis: if we ask "I want to work at SpaceX", the bot detects
 a different intent and talks about the positions available.
 
-#### Synonym Recognition
+#### Synonym Recognition (2 points)
 
 By being able to recognize common synonyms used by the user, the bot is a able to respond to a wider amount of inpputs and the user experiecne is enriched as they get a greater freedom when it comes to choosing how they phrase their question. This allows them to have a more natural conversation with the bot. as seen below, we are able to use red in place of crimson and the bot can still provide an accurate answer
     <p align="center"> 
     <img width="1252" height="214" src="static/img/synonym.png">
     </p>
+
+### Extra topics (0.5 points)
+
+We have expanded the topics Elon Musk bot can talk about. The current list is:
+
+* Crypto
+* Billionaire Tax
+* Tesla
+* SpaceX
+* Neuralink
+* Ukraine War **(new topic)**
+* Anime **(new topic)**
+
+### Out of Scope Responses (0.5 points)
+
+TODO
 
 ### Github Repo with commit history
 
@@ -108,10 +124,6 @@ The branch structure **as of 2022-03-17** can be found below. Each branch maps t
 <p align="center"> 
 <img width="1223" height="448" src="static/img/branch.png">
 </p>
-
-### Extra topics and out of scope responses
-
-We have added support for other companies operated or started by elon music as opposed to our original set and thereby increased the useability of our bot. Secondly we have also accounted for the fact that the bot does not have allencompasing knowledge and as a result we have included responses that can be used when the bot encounters unknown querys to help keep the flow of the conversation and provide useful feedback to the user.  
 
 ### Level 0 data flow diagram
 
