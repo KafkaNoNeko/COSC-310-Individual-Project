@@ -13,7 +13,7 @@ from elonmusk.main import cloud_function
 class TestNeuralinkApp(unittest.TestCase):
 
     def test_nod(self):
-        """Test that question about Nostalgia On Demand has 'Nostalgia On Demand' in answer"""
+        """Test that question about Nostalgia On Demand has 'nostalgia on demand' in answer"""
         app = Flask(__name__)
 
         with app.app_context():
@@ -22,7 +22,7 @@ class TestNeuralinkApp(unittest.TestCase):
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
-                "Nostalgia On Demand" in result["fulfillmentMessages"][0]["text"]["text"][0]
+                "nostalgia on demand" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
     def test_pain(self):
