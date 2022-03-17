@@ -48,7 +48,7 @@ class TestWhatIsCrypto(unittest.TestCase):
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
-                "test_NFT" in result["fulfillmentMessages"][0]["text"]["text"][0]
+                "NFT" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
 if __name__ == "__main__":
