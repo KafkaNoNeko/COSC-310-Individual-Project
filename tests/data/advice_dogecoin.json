@@ -1,0 +1,38 @@
+{
+  "responseId": "f0954443-a465-4061-8a3e-eb756d53f2de-e5ce3fa9",
+  "queryResult": {
+    "queryText": "I want to buy doge",
+    "parameters": {
+      "crypto": "dogecoin"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "Check my tweets about dogecoin, you'll find the answer !",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/645e41e0-d585-4c49-91ab-4549cf9c1019",
+      "displayName": "Crypto Advice Intent"
+    },
+    "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 45
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": 0.4,
+        "magnitude": 0.4
+      }
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}

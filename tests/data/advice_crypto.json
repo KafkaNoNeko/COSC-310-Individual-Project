@@ -1,0 +1,38 @@
+{
+  "responseId": "527166fd-dd19-4220-828f-6302ce9643c6-e5ce3fa9",
+  "queryResult": {
+    "queryText": "Should I start investing in crypto",
+    "parameters": {
+      "crypto": "crypto"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "Do not take this as investment advice, but I do own crypto",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/645e41e0-d585-4c49-91ab-4549cf9c1019",
+      "displayName": "Crypto Advice Intent"
+    },
+    "intentDetectionConfidence": 0.68685013,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 42
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": -0.1,
+        "magnitude": 0.1
+      }
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}
