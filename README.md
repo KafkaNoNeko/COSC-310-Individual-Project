@@ -54,10 +54,23 @@ is supported. For example, on Android the interface looks like:
 
 #### Entity analysis
 
-By enabling the bot to pick out proper nouns used in the conversation we are abke to improve the accuracy of the bot's responses by guaging the topic of conversation quicker than earlier. Thereby we save the user fom having to repeat themselves and improve their overall experience. as seen below, the bot is able to understand Tesla and Model S as entities.
+By enabling the bot to pick out proper nouns used in the conversation we are able to improve the accuracy of the bot's responses by guaging the topic of conversation quicker than earlier. Thereby we save the user fom having to repeat themselves and improve their overall experience. as seen below, the bot is able to understand Tesla and Model S as entities.
     <p align="center"> 
     <img width="1252" height="213" src="static/img/entity.png">
     </p>
+
+To detect entities, we manually defined the entity types of our training set in Dialogflow:
+
+<p align="center"> 
+<img width="800" height="600" src="static/img/EntityPage.png">
+</p>
+
+Inside each entity we defined, we provided the items we want to detect. For example, to detect the models Tesla sells as 
+seen in the previous chat, we created the "Models" entity:
+
+<p align="center"> 
+<img width="800" height="600" src="static/img/ModelsExample.png">
+</p>
 
 #### Sentiment analysis 
 
@@ -91,7 +104,7 @@ By being able to recognize common synonyms used by the user, the bot is a able t
 ### Github Repo with commit history
 
 Link to repo: https://github.com/cosc-310-group32/Assignment3/tree/main .
-The branch structure **as of 2022-03-15** can be found below.
+The branch structure **as of 2022-03-17** can be found below. Each branch maps to one Pull Request, with `main` as the branch with working code.
 <p align="center"> 
 <img width="1223" height="448" src="static/img/branch.png">
 </p>
