@@ -1,0 +1,50 @@
+{
+  "responseId": "4ac2402b-c48b-46be-a0d1-4d5b79b61ef8-e5ce3fa9",
+  "queryResult": {
+    "queryText": "I want to work as a Web Developer",
+    "action": "WorkatSpaceXIntent.WorkatSpaceXIntent-custom",
+    "parameters": {
+      "work": "Work",
+      "position": "Web Developer"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/workatspacexintent-followup",
+        "lifespanCount": 1,
+        "parameters": {
+          "work.original": "work",
+          "work": "Work",
+          "companies.original": "SpaceX",
+          "companies": "SpaceX",
+          "position": "Web Developer",
+          "position.original": "Web Developer"
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/c0ef5b8d-2e3b-4c58-b46c-cd398d148fd8",
+      "displayName": "Work at SpaceX Intent - custom"
+    },
+    "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 53
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {}
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}
