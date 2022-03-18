@@ -33,6 +33,8 @@ python -m unittest discover tests
     ├── tests                         # Tests for the bot
     │   ├── data                      # Raw data from Dialogflow after Intent and Entity matching
     │   ├── test_what_company.py      # Elon can answer about his companies
+    │   ├── test_spacex_work.py       # Elon can talk about job opportunities at SpaceX
+    │   ├── test_neuralink_app.py     # Elon can elaborate on some applications of the Link
     │   ├── mock_dialogflow_utils.py  # Utilities for writing tests
     └── README.md                     # This file!
 ```
