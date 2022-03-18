@@ -93,7 +93,7 @@ def handle_NeuralinkAppIntent_followup(query_result):
     print(f"DEBUG: Neuralink Applications follow-up Intent")
     
     try:
-        app = query_result["parameters"]["position"]
+        app = query_result["parameters"]["NeuralinkApp"]
 
         if app == "nostalgia on demand":
             return [
