@@ -131,3 +131,37 @@ def handle_daily_routine_intent(query_result):
             ])]
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
+
+def handle_NeuralinkAppIntent_followup(query_result):
+    """Returns list of text messages for the Neuralink Applications follow-up Intent"""
+    print(f"DEBUG: Neuralink Applications follow-up Intent")
+    
+    try:
+        app = query_result["parameters"]["NeuralinkApp"]
+
+        if app == "nostalgia on demand":
+            return [
+                """Ever had blurry memories of important moments of your life? The Link will eliminate these and 
+                enable you to exactly relive memories as if you travelled back to in time. This is what I call 
+                Nostalgia On Demand."""
+            ]
+        elif app == "pain elimination":
+            return [
+                """Oh, pain elimination! A world without pain, the source of all human suffering, who would reject it? The Link will enable its 
+                user to kill any pain they feel."""
+            ]
+        elif app == "AI symbiosis":
+            return [
+                """Achieving an AI symbiosis is vital to humanity from an existential threat perspective. We need to be prepared."""
+            ]
+        elif app == "telepathy":
+            return [
+                """This would be what I call 'non-linguistic consent consensual conceptual telepathy'. Putting our thoughts
+                into words not only requires a tremendous amount of effort, but also does not accurately describe what we are
+                really thinking. Telepathy can be the game changer!"""
+            ]
+        else:
+            return ["Sorry, this might not be currently on our list, but it is worth considering. Stay tuned for more exciting news!"]
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]

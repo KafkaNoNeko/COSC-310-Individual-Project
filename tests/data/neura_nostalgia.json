@@ -1,0 +1,52 @@
+{
+  "responseId": "37a5fe2b-b50e-4d4a-a85f-ab5a4383ca67-e5ce3fa9",
+  "queryResult": {
+    "queryText": "Tell me about nostalgia on demand",
+    "action": "NeuralinkApplicationsIntent.NeuralinkApplicationsIntent-custom",
+    "parameters": {
+      "NeuralinkApp": "nostalgia on demand"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/cosc310-a3/agent/sessions/25824181-e071-b803-1335-16d7765820c9/contexts/neuralinkapplicationsintent-followup",
+        "lifespanCount": 1,
+        "parameters": {
+          "NeuralinkApp": "nostalgia on demand",
+          "chip": "chip",
+          "NeuralinkApp.original": "nostalgia on demand",
+          "companies.original": "Neuralink",
+          "companies": "Neuralink",
+          "chip.original": "chips"
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/0bea39ce-2e8b-4443-94fc-34df26cfd835",
+      "displayName": "Neuralink Applications Intent - custom"
+    },
+    "intentDetectionConfidence": 0.82178795,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 73
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": 0.1,
+        "magnitude": 0.1
+      }
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}
