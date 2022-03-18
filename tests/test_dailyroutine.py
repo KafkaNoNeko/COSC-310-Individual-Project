@@ -1,5 +1,3 @@
-from elonmusk.main import cloud_function
-from tests.mock_dialogflow_utils import *
 import unittest
 import sys
 import os
@@ -8,16 +6,18 @@ from flask import Flask
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "elonmusk"))
 
+from elonmusk.main import cloud_function
+from tests.mock_dialogflow_utils import *
 
-class TestWorkAtSpaceX(unittest.TestCase):
+class TestDailyRoutine(unittest.TestCase):
 
     def test_morning(self):
         """Test that question about Morning has coffee or work or shower of 7am in answer"""
         app = Flask(__name__)
 
         with app.app_context():
-            swe_request = get_test_request("dailyroutine_moring")
-            response = cloud_function(swe_request)
+            morning_request = get_test_request("dailyroutine_moring")
+            response = cloud_function(morning_request)
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
@@ -34,8 +34,8 @@ class TestWorkAtSpaceX(unittest.TestCase):
         app = Flask(__name__)
 
         with app.app_context():
-            webdev_request = get_test_request("dailyroutine_evening")
-            response = cloud_function(webdev_request)
+            evening_request = get_test_request("dailyroutine_evening")
+            response = cloud_function(evening_request)
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
@@ -52,8 +52,8 @@ class TestWorkAtSpaceX(unittest.TestCase):
         app = Flask(__name__)
 
         with app.app_context():
-            webdev_request = get_test_request("dailyroutine_afternoon")
-            response = cloud_function(webdev_request)
+            afternoon_request = get_test_request("dailyroutine_afternoon")
+            response = cloud_function(afternoon_request)
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
