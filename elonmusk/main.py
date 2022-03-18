@@ -1,4 +1,4 @@
-from intent_handlers import *
+from elonmusk.intent_handlers import *
 
 def cloud_function(request):
     """Responds to any HTTP request.
@@ -16,7 +16,8 @@ def cloud_function(request):
     intent_dictionary = {
         "What Company Does Intent": handle_what_company_intent,
         "Work at SpaceX Intent - custom": handle_WorkatSpaceXIntent_followup,
-        "Neuralink Applications Intent - custom": handle_NeuralinkAppIntent_followup
+        "Daily Routine Intent": handle_daily_routine_intent,
+        "Neuralink Applications Intent - custom": handle_NeuralinkAppIntent_followup,
     }
 
     try:

@@ -1,7 +1,10 @@
+import random
+
+
 def handle_what_company_intent(query_result):
     """Returns list of text messages for the What Company Intent"""
     print(f"DEBUG: What Company Intent")
-    
+
     try:
         company = query_result["parameters"]["Companies"]
 
@@ -48,10 +51,11 @@ def handle_what_company_intent(query_result):
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
 
+
 def handle_WorkatSpaceXIntent_followup(query_result):
     """Returns list of text messages for the Work at SpaceX follow-up Intent"""
     print(f"DEBUG: Work at SpaceX follow-up Intent")
-    
+
     try:
         position = query_result["parameters"]["position"]
 
@@ -84,6 +88,47 @@ def handle_WorkatSpaceXIntent_followup(query_result):
             ]
         else:
             return ["Sorry, I don't remember what the detailed job description is! Check it out here: www.spacex.com/careers/"]
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
+
+def handle_daily_routine_intent(query_result):
+    print(f"DEBUG: Daily Routine Intent")
+    # Souce: https://finty.com/us/daily-routines/elon-musk/
+
+    try:
+        routine = query_result["parameters"]["routine"]
+
+        if routine == 'Morning':
+            return [random.choice([
+                """I usually wake up at about 7am. I then take a shower and have a nice cup of coffee. I don't usually have breakfast because of my work. """,
+                """I hate sleeping but I have to sleep for about 6 hours to be at my best performance. I usually start my morning with shower and coffee""",
+                """I don't usually have breakfast since after waking up (usually at 7am) and coffee, I have to run to work."""
+            ])]
+        elif routine == 'Afternoon':
+            return [random.choice([
+                """Mostly work, I'll storm out if they BS-ing""",
+                """Work, work, and work""",
+                """I usually be at a state where I work without noticing the clock"""
+            ])]
+        elif routine == "Evening":
+            return [random.choice([
+                """Since I don't eat during the day, this is the time I consume my food and be with my child. Then work again. And finally Anime!""",
+                """I will have some diet coke, play with my child, and jump into work at about 10pm and reward myself with Anime""",
+                """I will sleep at 1am, before that, I eat, play with my kid, work, and watch Anime. Busy night, right?"""
+            ])]
+        elif routine == "freetime":
+            return [random.choice([
+                """Freetime? Never heard of that.""",
+                """I work 80 to 100 hours a week, and family, what do you think?""",
+                """Anime!"""
+            ])]
+        else:
+            return [random.choice([
+                """Don't be a paparazzi""",
+                """Which news channel do you come from?""",
+                """Book the real Elon Musk for question like this!"""
+            ])]
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
 

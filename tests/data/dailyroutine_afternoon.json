@@ -1,0 +1,37 @@
+{
+  "responseId": "30fe6f1d-0243-44d9-9f48-84363604babd-e5ce3fa9",
+  "queryResult": {
+    "queryText": "do you sleep at noon?",
+    "parameters": {
+      "routine": "Afternoon"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Work, work, and work"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/59b470ae-bdd3-4481-bcdf-af18e1deb88f",
+      "displayName": "Daily Routine Intent"
+    },
+    "intentDetectionConfidence": 0.60770893,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 65
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": -0.1,
+        "magnitude": 0.1
+      }
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "responseId": "7ca3780a-63fe-4e59-bf98-58fe9134fa54-e5ce3fa9",
+  "queryResult": {
+    "queryText": "what keep you up at night",
+    "parameters": {
+      "routine": "Evening"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Since I don't eat during the day, this is the time I consume my food and be with my child. Then work again. And finally Anime!"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/59b470ae-bdd3-4481-bcdf-af18e1deb88f",
+      "displayName": "Daily Routine Intent"
+    },
+    "intentDetectionConfidence": 0.62692094,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 65
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": 0.8,
+        "magnitude": 0.8
+      }
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}
