@@ -22,7 +22,7 @@ class TestNeuralinkApp(unittest.TestCase):
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
-                "nostalgia on demand" in result["fulfillmentMessages"][0]["text"]["text"][0]
+                "Nostalgia On Demand" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
     def test_pain(self):

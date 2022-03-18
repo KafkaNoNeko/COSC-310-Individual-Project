@@ -98,11 +98,12 @@ def handle_NeuralinkAppIntent_followup(query_result):
         if app == "nostalgia on demand":
             return [
                 """Ever had blurry memories of important moments of your life? The Link will eliminate these and 
-                enable you to exactly relive memories as if you travelled back to in time."""
+                enable you to exactly relive memories as if you travelled back to in time. This is what I call 
+                Nostalgia On Demand."""
             ]
         elif app == "pain elimination":
             return [
-                """A world without pain, the source of all human suffering, who would reject it? The Link will enable its 
+                """Oh, pain elimination! A world without pain, the source of all human suffering, who would reject it? The Link will enable its 
                 user to kill any pain they feel."""
             ]
         elif app == "AI symbiosis":
