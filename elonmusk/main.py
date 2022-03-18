@@ -1,4 +1,4 @@
-from intent_handlers import *
+from elonmusk.intent_handlers import *
 
 def cloud_function(request):
     """Responds to any HTTP request.
