@@ -157,13 +157,13 @@ def handle_billionaire_tax_intent(query_result):
     print(f"DEBUG: Billionaire Tax Intent")
 
     try:
-        crypto = query_result["parameters"]["Tax"]
+        tax = query_result["parameters"]["Tax"] # note: tax can also be a litst
 
-        if crypto == "2021":
+        if tax == "2021" or "2021" in tax:
             return [
                 """I will pay more taxes than any American in history in 2021."""
             ]
-        elif crypto == "2018":
+        elif tax == "2018" or "2018" in tax:
             return [
                 """That’s a funny joke."""
             ]

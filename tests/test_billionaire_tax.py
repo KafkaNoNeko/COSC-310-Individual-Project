@@ -13,7 +13,7 @@ from elonmusk.main import cloud_function
 class TestBillionaireTax(unittest.TestCase):
 
     def test_tax2021(self):
-        """Test that question about dogecoin has dogecoin in answer"""
+        """Test that question about 2021 tax has 2021 in answer"""
         app = Flask(__name__)
 
         with app.app_context():
@@ -26,7 +26,7 @@ class TestBillionaireTax(unittest.TestCase):
             )
 
     def test_tax2018(self):
-        """Test that question about portfolio has portfolio in answer"""
+        """Test that question about the 2018 tax yields a funny joke response"""
         app = Flask(__name__)
 
         with app.app_context():
@@ -35,7 +35,7 @@ class TestBillionaireTax(unittest.TestCase):
             result = json.loads(response.get_data(as_text=True))
 
             self.assertTrue(
-                "2018" in result["fulfillmentMessages"][0]["text"]["text"][0]
+                "joke" in result["fulfillmentMessages"][0]["text"]["text"][0]
             )
 
 
