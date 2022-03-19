@@ -39,7 +39,7 @@ class TestCryptoAdvice(unittest.TestCase):
             )
 
     def test_advice_crypto(self):
-        """Test that question about portfolio has portfolio in answer"""
+        """Test that question about crypto has crypto in answer"""
         app = Flask(__name__)
 
         with app.app_context():
