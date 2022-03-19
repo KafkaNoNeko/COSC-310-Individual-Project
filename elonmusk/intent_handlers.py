@@ -127,7 +127,7 @@ def handle_what_is_crypto_intent(query_result):
     print(f"DEBUG: What is Crypto Intent")
 
     try:
-        crypto = query_result["parameters"]["crypto"]
+        crypto = query_result["parameters"]["crypto"][0]
 
         if crypto == "dogecoin":
             return [
