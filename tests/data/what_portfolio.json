@@ -1,0 +1,37 @@
+{
+  "responseId": "0128c6a7-1f90-49fa-b8c3-9e0f077201f8-e5ce3fa9",
+  "queryResult": {
+    "queryText": "What does portfolio do",
+    "parameters": {
+      "crypto": [
+        "portfolio"
+      ]
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "It is any form of currency that exists digitally or virtually and uses cryptography to secure transactions. Cryptocurrencies don't have a central issuing or regulating authority. Instead, they use a decentralized system to record transactions and issue new units.",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/33d43c07-e2bb-45c0-82a4-51ed3c28197e",
+      "displayName": "What is Crypto Intent"
+    },
+    "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 139
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {}
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}

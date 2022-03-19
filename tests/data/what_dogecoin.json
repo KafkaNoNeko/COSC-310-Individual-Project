@@ -1,0 +1,37 @@
+{
+  "responseId": "83be5904-0e66-4966-9a24-7a4159949f44-e5ce3fa9",
+  "queryResult": {
+    "queryText": "What is special about doge?",
+    "parameters": {
+      "crypto": [
+        "dogecoin"
+      ]
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "It is any form of currency that exists digitally or virtually and uses cryptography to secure transactions. Cryptocurrencies don't have a central issuing or regulating authority. Instead, they use a decentralized system to record transactions and issue new units.",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/33d43c07-e2bb-45c0-82a4-51ed3c28197e",
+      "displayName": "What is Crypto Intent"
+    },
+    "intentDetectionConfidence": 1,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 47
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {}
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}

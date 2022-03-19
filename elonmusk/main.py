@@ -16,6 +16,9 @@ def cloud_function(request):
     intent_dictionary = {
         "What Company Does Intent": handle_what_company_intent,
         "Work at SpaceX Intent - custom": handle_WorkatSpaceXIntent_followup,
+        "Crypto Advice Intent": handle_crypto_advice_intent,
+        "What is Crypto Intent": handle_what_is_crypto_intent,
+        "Billionaire Tax Intent": handle_billionaire_tax_intent,
         "Daily Routine Intent": handle_daily_routine_intent,
         "Neuralink Applications Intent - custom": handle_NeuralinkAppIntent_followup,
     }

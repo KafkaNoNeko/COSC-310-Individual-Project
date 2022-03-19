@@ -1,0 +1,59 @@
+{
+  "responseId": "7fe59dd6-b0e7-43f9-ad45-e0ef7e1ef008-e5ce3fa9",
+  "queryResult": {
+    "queryText": "Is it true that you paid nothing for the federal income tax in 2018",
+    "parameters": {
+      "Tax": [
+        "2018",
+        "2018"
+      ]
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "My wealth ‘isn’t some deep mystery. My taxes are super simple, and I pay them.",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/cosc310-a3/agent/sessions/2be9ab31-a37c-87a9-f17f-ab7ace068a4b/contexts/companiesintent-followup",
+        "lifespanCount": 3,
+        "parameters": {
+          "Companies": "Tesla",
+          "Companies.original": "tesla",
+          "Tax": [
+            "2018",
+            "2018"
+          ],
+          "Tax.original": [
+            "federal income",
+            "2018"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/cosc310-a3/agent/intents/358e7784-1455-4733-80ca-0283ffe9b96b",
+      "displayName": "Billionaire Tax Intent"
+    },
+    "intentDetectionConfidence": 0.6679809,
+    "diagnosticInfo": {
+      "webhook_latency_ms": 52
+    },
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": -0.4,
+        "magnitude": 0.4
+      }
+    }
+  },
+  "webhookStatus": {
+    "message": "Webhook execution successful"
+  }
+}
