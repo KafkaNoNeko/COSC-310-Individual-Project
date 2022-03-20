@@ -1,0 +1,34 @@
+{
+    "responseId": "dabd771b-d06c-4088-9461-9f091c0330de-e5ce3fa9",
+    "queryResult": {
+      "queryText": "Have you talked to Zelensky?",
+      "parameters": {
+        "ukraine": "Zelensky"
+      },
+      "allRequiredParamsPresent": true,
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+            ]
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/cosc310-a3/agent/intents/b748f4b7-85f7-4121-8b25-2b28488b3081",
+        "displayName": "Stand With Ukraine Intent"
+      },
+      "intentDetectionConfidence": 1,
+      "diagnosticInfo": {
+        "webhook_latency_ms": 37
+      },
+      "languageCode": "en",
+      "sentimentAnalysisResult": {
+        "queryTextSentiment": {}
+      }
+    },
+    "webhookStatus": {
+      "message": "Webhook execution successful"
+    }
+  }

@@ -1,0 +1,35 @@
+{
+    "responseId": "799431b2-b89d-452a-b533-aa7d90a07155-e5ce3fa9",
+    "queryResult": {
+      "queryText": "Describe what you would do to Putin",
+      "parameters": {
+        "russia": "Putin",
+        "routine": ""
+      },
+      "allRequiredParamsPresent": true,
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+            ]
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/cosc310-a3/agent/intents/6fa39404-f691-4009-9a3d-a0d71c9f92cb",
+        "displayName": "Fight Putin Intent"
+      },
+      "intentDetectionConfidence": 0.7039449,
+      "diagnosticInfo": {
+        "webhook_latency_ms": 1071
+      },
+      "languageCode": "en",
+      "sentimentAnalysisResult": {
+        "queryTextSentiment": {}
+      }
+    },
+    "webhookStatus": {
+      "message": "Webhook execution successful"
+    }
+  }

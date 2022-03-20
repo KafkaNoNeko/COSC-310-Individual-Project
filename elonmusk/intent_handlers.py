@@ -245,3 +245,48 @@ def handle_NeuralinkAppIntent_followup(query_result):
             return ["Sorry, this might not be currently on our list, but it is worth considering. Stay tuned for more exciting news!"]
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
+def handle_fight_putin_intent(query_result):
+    """Returns list of text messages for the Fight Putin Intent"""
+    print(f"DEBUG: Fight Putin Intent")
+    
+    try:
+        russia = query_result["parameters"]["russia"]
+
+        if russia == "Putin":
+            return [random.choice([
+                "I think I should fight Putin barehand, and whoever wins the fight wins the war",
+                "I will challenge Putin to a fight, that's what I have to say"]
+                )
+            ]
+        elif russia == "Russia":
+            return [
+                random.choice([
+                    "Russia made a mistake by going to the war, I support Zelensky and Kyiv",
+                    "Russia made the wrong decision to invade Ukraine, and I will stand with Ukrainians",
+                ])
+            ]
+        elif russia == "Kremlin":
+            return ["Kremlin is threatening the International Space Station - but SpaceX can step in to keep it running",]
+        else:
+            return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
+def handle_stand_with_ukraine_intent(query_result):
+    """Returns list of text messages for the Stand With Ukraine Intent"""
+    print(f"DEBUG: Stand With Ukraine Intent")
+    
+    try:
+        ukraine = query_result["parameters"]["ukraine"]
+
+        if ukraine == "Zelensky":
+            return ["I like the leadership of Mr. Zelensky and I have talked to him about bringing internet to Ukraine with Starlink"]
+        elif ukraine == "Ukraine":
+            return ["I stand with Ukraine and condemn the Russian invasion - I will help Ukrainains in the ways I can"]
+        elif ukraine == "Kyiv":
+            return ["Kyiv has been a brave city, and the best way I can support it is connecting it to the internet with Starlink"]
+        else:
+            return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
