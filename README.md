@@ -192,6 +192,14 @@ However, it also correctly recognised the word "Neuralnk" as referring to Neural
 
 #### Other Limitations
 
+1. Our bot cannot handle several keywords in one query. In this case, the first keyword in the sentence will be used to generate the response.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim3.png">
+</p>
+
+2. Intents in Dialogflow can have follow-up intents. These follow-up intents cannot be detected unless the main intent is identified first. A 'lifespan' variable sets the number of turns during which the follow-up intent can be detected following a detection of a main intent. Hence, if a user sends a follow-up question in more turns than the number defined by the 'lifespan' variable, an error message will be returned.
+
 ### Possible API Branches
 
 * Synonym recognition process
