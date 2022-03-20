@@ -39,7 +39,7 @@ class TestWhatIsCrypto(unittest.TestCase):
             )
 
     def test_what_NFT(self):
-        """Test that question about portfolio has portfolio in answer"""
+        """Test that question about NFT has portfolio in NFT"""
         app = Flask(__name__)
 
         with app.app_context():

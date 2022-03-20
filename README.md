@@ -4,7 +4,7 @@
 <img width="620" height="414" src="static/img/ElonMusk.png">
 </p>
 
-Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Musk. It can answer questions about Tesla, SpaceX, cryptocurrencies - give it a try!
+Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Musk. It can answer questions about Tesla, SpaceX, cryptocurrencies, and more - give it a try!
 
 ## Talking to the Bot
 
@@ -32,10 +32,14 @@ python -m unittest discover tests
     │   ├── intent_handlers.py        # Logic for each Intent (i.e. Topic) Elon can talk about
     ├── tests                         # Tests for the bot
     │   ├── data                      # Raw data from Dialogflow after Intent and Entity matching
-    │   ├── test_what_company.py      # Elon can answer about his companies
-    │   ├── test_spacex_work.py       # Elon can talk about job opportunities at SpaceX
-    │   ├── test_neuralink_app.py     # Elon can elaborate on some applications of the Link
     │   ├── mock_dialogflow_utils.py  # Utilities for writing tests
+    │   ├── test_billionaire_tax.py   # Elon can talk about his tax contributions
+    │   ├── test_crypto_advice.py     # Elon can offer crypto advice
+    │   ├── test_dailyroutine.py      # Elon can offer insights into his daily routine
+    │   ├── test_neuralink_app.py     # Elon can elaborate on some applications of the Link
+    │   ├── test_spacex_work.py       # Elon can talk about job opportunities at SpaceX
+    │   ├── test_what_company.py      # Elon can answer about his companies
+    │   ├── test_what_is_crypto.py    # Elon can answer questions related to crypto
     └── README.md                     # This file!
 ```
 
@@ -56,52 +60,52 @@ is supported. For example, on Android the interface looks like:
 
 #### Entity analysis (2 points)
 
-By enabling the bot to pick out proper nouns used in the conversation we are able to improve the accuracy of the bot's responses by guaging the topic of conversation quicker than earlier. Thereby we save the user fom having to repeat themselves and improve their overall experience. as seen below, the bot is able to understand Tesla and Model S as entities.
-    <p align="center"> 
-    <img width="1252" height="213" src="static/img/entity.png">
-    </p>
+By enabling the bot to pick out proper nouns used in the conversation we are able to improve the accuracy of the bot's responses by gauging the topic of conversation quicker than before. Thereby we improve the user's overall experience by saving them from having to repeat themselves. As seen below, the bot is able to identify Tesla and Model S as entities.
+
+<p align="center"> 
+<img width="1252" height="213" src="static/img/entity.png">
+</p>
 
 To detect entities, we manually defined the entity types of our training set in Dialogflow:
 
 <p align="center"> 
-<img width="800" height="600" src="static/img/EntityPage.png">
+<img width="800" height="500" src="static/img/EntityPage.png">
 </p>
 
-Inside each entity we defined, we provided the items we want to detect. For example, to detect the models Tesla sells as 
-seen in the previous chat, we created the "Models" entity:
+Inside each entity we defined, we provided the items we want to detect. For example, to detect the models Tesla sells as seen in the previous chat, we created the "Models" entity:
 
 <p align="center"> 
-<img width="800" height="400" src="static/img/ModelsExample.png">
+<img width="800" height="300" src="static/img/ModelsExample.png">
 </p>
 
 #### Sentiment analysis (2 points)
 
-We are able to analyse to beyond just the individual words the user is saying with Dialogflow. That happens with Sentiment Analysis, which in Dialogflow is also called Intent Analysis.
+With Dialogflow, we are able to analyse beyond just the individual words the user is saying. That happens with Sentiment Analysis which is also called Intent Analysis in Dialogflow.
 
-In order for Dialogflow to do Sentiment Analysis, we provided it with training phrases. For example, to talk about companies we
-provide Dialogflow with sentences such as "Tell me more about SpaceX" and annotate that SpaceX is an entity of the type "Company".
+In order for Dialogflow to perform Sentiment Analysis, we provided it with training phrases. For example, to talk about companies, we provide Dialogflow with sentences such as "Tell me more about SpaceX" and annotate that SpaceX is an entity of the type "Company".
 
 <p align="center"> 
 <img width="800" height="600" src="static/img/SentimentAnalysisTraining.png">
 </p>
 
-If we provide enough training sentences, Dialogflow detects the sentiment correctly. We reinforce that the training set does not need to be extensive to detect the sentiment, take for example the following conversation:
+If we provide enough training sentences, Dialogflow detects the sentiment correctly. We emphasize that the training set does not need to be extensive to detect the sentiment, take for example the following conversation:
 
 <p align="center"> 
 <img width="800" height="600" src="static/img/SentimentAnalysisChat.png">
 </p>
 
 Dialogflow can answer about Tesla even though the training sentence is "Tell me more about SpaceX". It can also generalize 
-sentiment analysis to words it has never seen. "Elucidate" never appeared on the training set, and our bot still answered the question
-correctly. Lastly, Sentinment Analysis is not based only on Entity Analysis: if we ask "I want to work at SpaceX", the bot detects
+sentiment analysis to words it has never seen. "Elucidate" never appeared in the training set, but our bot still answered the question
+correctly. Lastly, Sentiment Analysis is not only based on Entity Analysis: if we ask "I want to work at SpaceX", the bot detects
 a different intent and talks about the positions available.
 
 #### Synonym Recognition (2 points)
 
-By being able to recognize common synonyms used by the user, the bot is a able to respond to a wider amount of inpputs and the user experiecne is enriched as they get a greater freedom when it comes to choosing how they phrase their question. This allows them to have a more natural conversation with the bot. as seen below, we are able to use red in place of crimson and the bot can still provide an accurate answer
-    <p align="center"> 
-    <img width="1252" height="214" src="static/img/synonym.png">
-    </p>
+By being able to recognize common synonyms used by the user, the bot is a able to respond to a wider variety of inputs. This enriches the user experience as they get a greater freedom when it comes to choosing how they phrase their question. This allows them to have a more natural conversation with the bot. As seen below, we are able to use 'red' in place of 'crimson' and the bot can still provide an accurate answer
+
+<p align="center"> 
+<img width="1252" height="214" src="static/img/synonym.png">
+</p>
 
 ### Extra topics (0.5 points)
 
@@ -113,14 +117,14 @@ We have expanded the topics Elon Musk bot can talk about. The current list is:
 * SpaceX
 * Neuralink
 * Ukraine War **(new topic)**
-* Anime **(new topic)**
+* Daily Routine **(new topic)**
 
 ### Out of Scope Responses (0.5 points)
 
-We created an Out of Scope intent in Dialogflow. When Sentiment Analysis cannot match a sentence to an existing intent, we send one predefined responses using Elon's sarcasm. Take a look at the example chat where we greet Elon in French and ask if he speaks French:
+We created an Out of Scope intent in Dialogflow. When Sentiment Analysis cannot match a sentence to an existing intent, we send one predefined response using Elon's sarcasm. Take a look at the example chat where we greet Elon in French and ask if he speaks French:
 
 <p align="center"> 
-<img width="800" height="400" src="static/img/OutOfScope.png">
+<img width="800" height="300" src="static/img/OutOfScope.png">
 </p>
 
 
@@ -139,7 +143,7 @@ The Level 0 diagram can be found below:
 <img width="1480" height="421" src="static/img/lvl0DFD.png">
 </p>
 
-Explaination: When the user first connects to the bot they send a message to dialogflow which passes it on to the bot to start the session. Every question asked by the user is analysed by dialogflow and then parsed to the bot once it has been converted to it's closest match on the database. The bot then returns the result based on the closest match and that result is sent over to the user through dialogflow.  
+Explanation: When the user first connects to the bot they send a message to dialogflow which passes it on to the bot to start the session. Every question asked by the user is analysed by dialogflow and then parsed to the bot once it has been converted to its closest match on the database. The bot then returns the result based on the closest match and that result is sent over to the user through dialogflow.  
 
 ### Level 1 data flow diagram
 
@@ -148,7 +152,7 @@ The level 1 dataflow diagram can be found below:
 <img width="1635" height="960" src="static/img/lvl1DFD.png">
 </p>
 
-Explaination: When the user connects to dialogflow using telegram, they send a start bot message that is passed on to the bot to start the session as a closest matched question. Every subsiquent query is analysed for synonyms, sentiment and entities while beong processed and dialogflow finds the closest match to the processed query from the database of information that is available to the bot. This question is then sent to the bot which then looks up the answer and responds with the answer to the question. This answer is, in turn, displayed to the user on the telegram GUI.
+Explanation: When the user connects to dialogflow using telegram, they send a 'start bot' message that is passed on to the bot to start the session as a closest matched question. Every subsequent query is analysed for synonyms, sentiment, and entities while being processed and dialogflow finds the closest match to the processed query from the database of information that is available to the bot. This question is then sent to the bot which then looks up the answer and responds with the answer to the question. This answer is, in turn, displayed to the user on the telegram GUI.
 
 ### Sample output and Limitations
 
@@ -160,7 +164,7 @@ Explaination: When the user connects to dialogflow using telegram, they send a s
 * Entity recognition process
 * closest match to queston using processed query can be applied to any database.
 * Sentiment analysis.
-* Our dialogflow impelemtation can be plugged into most telegram bots with relative ease and can act as the backbone for other bots.
+* Our dialogflow implementation can be plugged into most telegram bots with relative ease and can act as the backbone for other bots.
 
 ## Built With
 
