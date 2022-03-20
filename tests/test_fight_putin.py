@@ -18,6 +18,13 @@ class TestFightPutin(unittest.TestCase):
 
         with app.app_context():
             putin_request = get_test_request("do_to_putin")
+
+            response = cloud_function(putin_request)
+            result = json.loads(response.get_data(as_text=True))
+
+            self.assertTrue(
+                "Putin" in result["fulfillmentMessages"][0]["text"]["text"][0]
+            )
         
     
     def test_view_on_russia(self):
@@ -26,6 +33,13 @@ class TestFightPutin(unittest.TestCase):
 
         with app.app_context():
             russia_request = get_test_request("view_on_russia")
+
+            response = cloud_function(russia_request)
+            result = json.loads(response.get_data(as_text=True))
+
+            self.assertTrue(
+                "Russia" in result["fulfillmentMessages"][0]["text"]["text"][0]
+            )
     
     def test_concerns_about_kremlin(self):
         """Test that question about Kremlin has Kremlin in answer"""
@@ -33,6 +47,13 @@ class TestFightPutin(unittest.TestCase):
 
         with app.app_context():
             kremlin_request = get_test_request("concerns_kremlin")
+
+            response = cloud_function(kremlin_request)
+            result = json.loads(response.get_data(as_text=True))
+
+            self.assertTrue(
+                "Kremlin" in result["fulfillmentMessages"][0]["text"]["text"][0]
+            )
 
 if __name__ == "__main__":
     unittest.main()
