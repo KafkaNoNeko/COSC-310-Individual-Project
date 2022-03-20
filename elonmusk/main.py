@@ -21,6 +21,8 @@ def cloud_function(request):
         "Billionaire Tax Intent": handle_billionaire_tax_intent,
         "Daily Routine Intent": handle_daily_routine_intent,
         "Neuralink Applications Intent - custom": handle_NeuralinkAppIntent_followup,
+        "Fight Putin Intent": handle_fight_putin_intent,
+        "Stand With Ukraine Intent": handle_stand_with_ukraine_intent,
     }
 
     try:
