@@ -156,13 +156,41 @@ Explanation: When the user connects to dialogflow using telegram, they send a 's
 
 ### Sample output and Limitations
 
+#### Sample output (30 turns)
+
 Below is a sample output showcasing our new features: dealing with out-of-context responses, entity recognition, synonym recognition, sentiment analysis, and the addition of two new topics (Ukraine War and Elon's daily routine).
 
 <p align="center"> 
 <img src="static/img/sample_output_30.png">
 </p>
 
+#### Limitation Sample output (1)
 
+At this stage, our bot only recognises keywords when they match the case in which they were defined at training.
+
+In this example, 'nostalgia on demand' (all lowercase) was defined as the keyword at training time. A user input with slightly different cases will result in a fallback message.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim1.png">
+</p>
+
+#### Limitation Sample output (2)
+
+At this moment, our bot does not handle misspellings correctly in all situations.
+
+When the word 'Tesla' is misspelt, the bot responds with an error message.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim2.png">
+</p>
+
+However, it also correctly recognised the word "Neuralnk" as referring to Neuralink.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim2c.png">
+</p>
+
+#### Other Limitations
 
 ### Possible API Branches
 
