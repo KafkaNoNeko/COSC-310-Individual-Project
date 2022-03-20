@@ -156,7 +156,13 @@ Explanation: When the user connects to dialogflow using telegram, they send a 's
 
 ### Sample output and Limitations
 
-**todo**
+Below is a sample output showcasing our new features: dealing with out-of-context responses, entity recognition, synonym recognition, sentiment analysis, and the addition of two new topics (Ukraine War and Elon's daily routine).
+
+<p align="center"> 
+<img src="static/img/sample_output_30.png">
+</p>
+
+
 
 ### Possible API Branches
 
