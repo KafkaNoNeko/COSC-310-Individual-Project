@@ -248,10 +248,10 @@ def handle_NeuralinkAppIntent_followup(query_result):
 
 def handle_fight_putin_intent(query_result):
     """Returns list of text messages for the Fight Putin Intent"""
-    print(f"DEBUG: What Company Intent")
+    print(f"DEBUG: Fight Putin Intent")
     return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
 
 def handle_stand_with_ukraine_intent(query_result):
     """Returns list of text messages for the Stand With Ukraine Intent"""
-    print(f"DEBUG: What Company Intent")
+    print(f"DEBUG: Stand With Ukraine Intent")
     return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]

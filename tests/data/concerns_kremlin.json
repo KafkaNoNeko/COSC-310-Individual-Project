@@ -1,0 +1,38 @@
+{
+    "responseId": "747711f9-c486-443d-bbb1-0169c76cfef6-e5ce3fa9",
+    "queryResult": {
+      "queryText": "Any concerns about the Kremlin?",
+      "parameters": {
+        "routine": "",
+        "russia": "Kremlin"
+      },
+      "allRequiredParamsPresent": true,
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "My engineers are working on this right now - thanks for talking to Elon Musk Bot"
+            ]
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/cosc310-a3/agent/intents/6fa39404-f691-4009-9a3d-a0d71c9f92cb",
+        "displayName": "Fight Putin Intent"
+      },
+      "intentDetectionConfidence": 0.74931,
+      "diagnosticInfo": {
+        "webhook_latency_ms": 54
+      },
+      "languageCode": "en",
+      "sentimentAnalysisResult": {
+        "queryTextSentiment": {
+          "score": -0.1,
+          "magnitude": 0.1
+        }
+      }
+    },
+    "webhookStatus": {
+      "message": "Webhook execution successful"
+    }
+  }
