@@ -27,20 +27,22 @@ python -m unittest discover tests
 
 ```
     .
-    ├── elonmusk                      # Code for the Python back-end
-    │   ├── main.py                   # Entrypoint for Cloud Function
-    │   ├── intent_handlers.py        # Logic for each Intent (i.e. Topic) Elon can talk about
-    ├── tests                         # Tests for the bot
-    │   ├── data                      # Raw data from Dialogflow after Intent and Entity matching
-    │   ├── mock_dialogflow_utils.py  # Utilities for writing tests
-    │   ├── test_billionaire_tax.py   # Elon can talk about his tax contributions
-    │   ├── test_crypto_advice.py     # Elon can offer crypto advice
-    │   ├── test_dailyroutine.py      # Elon can offer insights into his daily routine
-    │   ├── test_neuralink_app.py     # Elon can elaborate on some applications of the Link
-    │   ├── test_spacex_work.py       # Elon can talk about job opportunities at SpaceX
-    │   ├── test_what_company.py      # Elon can answer about his companies
-    │   ├── test_what_is_crypto.py    # Elon can answer questions related to crypto
-    └── README.md                     # This file!
+    ├── elonmusk                        # Code for the Python back-end
+    │   ├── main.py                     # Entrypoint for Cloud Function
+    │   ├── intent_handlers.py          # Logic for each Intent (i.e. Topic) Elon can talk about
+    ├── tests                           # Tests for the bot
+    │   ├── data                        # Raw data from Dialogflow after Intent and Entity matching
+    │   ├── mock_dialogflow_utils.py    # Utilities for writing tests
+    │   ├── test_billionaire_tax.py     # Elon can talk about his tax contributions
+    │   ├── test_crypto_advice.py       # Elon can offer crypto advice
+    │   ├── test_dailyroutine.py        # Elon can offer insights into his daily routine
+    │   ├── test_fight_putin.py         # Elon can talk about his current opinion on Russia and Putin's actions
+    │   ├── test_neuralink_app.py       # Elon can elaborate on some applications of the Link
+    │   ├── test_spacex_work.py         # Elon can talk about job opportunities at SpaceX
+    │   ├── test_stand_with_ukraine.py  # Elon can offer his opinion on the current situation in Ukraine 
+    │   ├── test_what_company.py        # Elon can answer about his companies
+    │   ├── test_what_is_crypto.py      # Elon can answer questions related to crypto
+    └── README.md                       # This file!
 ```
 
 ## Features added in Assignment 3
@@ -156,7 +158,49 @@ Explanation: When the user connects to dialogflow using telegram, they send a 's
 
 ### Sample output and Limitations
 
-**todo**
+#### Sample output (30 turns)
+
+Below is a sample output showcasing our new features: dealing with out-of-context responses, entity recognition, synonym recognition, sentiment analysis, and the addition of two new topics (Ukraine War and Elon's daily routine).
+
+<p align="center"> 
+<img src="static/img/sample_output_30.png">
+</p>
+
+#### Limitation Sample output (1)
+
+At this stage, our bot only recognises keywords when they match the case in which they were defined at training.
+
+In this example, 'nostalgia on demand' (all lowercase) was defined as the keyword at training time. A user input with slightly different cases will result in a fallback message.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim1.png">
+</p>
+
+#### Limitation Sample output (2)
+
+At this moment, our bot does not handle misspellings correctly in all situations.
+
+When the word 'Tesla' is misspelt, the bot responds with an error message.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim2.png">
+</p>
+
+However, it also correctly recognised the word "Neuralnk" as referring to Neuralink.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim2c.png">
+</p>
+
+#### Other Limitations
+
+1. Our bot cannot handle several keywords in one query. In this case, the first keyword in the sentence will be used to generate the response.
+
+<p align="center"> 
+<img src="static/img/sample_out_lim3.png">
+</p>
+
+2. Intents in Dialogflow can have follow-up intents. These follow-up intents cannot be detected unless the main intent is identified first. A 'lifespan' variable sets the number of turns during which the follow-up intent can be detected following a detection of a main intent. Hence, if a user sends a follow-up question in more turns than the number defined by the 'lifespan' variable, an error message will be returned.
 
 ### Possible API Branches
 
