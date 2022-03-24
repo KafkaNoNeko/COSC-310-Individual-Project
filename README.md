@@ -47,96 +47,13 @@ python -m unittest discover tests
 
 ## Features added in Assignment 3
 
-### GUI Improvements (1 point)
-
-We use Telegram's user interface as a way of giving a face to our bot. By incorporating the already popular and polished platform were able to vastly improve on the GUI. 
-
-The bot is available at https://t.me/COSC310_ElonMusk_Dialogflow_bot, and users can talk to the bot in any platform that Telegram 
-is supported. For example, on Android the interface looks like:
-
-<p align="center"> 
-<img width="400" height="800" src="static/img/GUI.png">
-</p>
-
-### Improvements using language toolkits
-
-#### Entity analysis (2 points)
-
-By enabling the bot to pick out proper nouns used in the conversation we are able to improve the accuracy of the bot's responses by gauging the topic of conversation quicker than before. Thereby we improve the user's overall experience by saving them from having to repeat themselves. As seen below, the bot is able to identify Tesla and Model S as entities.
-
-<p align="center"> 
-<img width="1252" height="213" src="static/img/entity.png">
-</p>
-
-To detect entities, we manually defined the entity types of our training set in Dialogflow:
-
-<p align="center"> 
-<img width="800" height="500" src="static/img/EntityPage.png">
-</p>
-
-Inside each entity we defined, we provided the items we want to detect. For example, to detect the models Tesla sells as seen in the previous chat, we created the "Models" entity:
-
-<p align="center"> 
-<img width="800" height="300" src="static/img/ModelsExample.png">
-</p>
-
-#### Sentiment analysis (2 points)
-
-With Dialogflow, we are able to analyse beyond just the individual words the user is saying. That happens with Sentiment Analysis which is also called Intent Analysis in Dialogflow.
-
-In order for Dialogflow to perform Sentiment Analysis, we provided it with training phrases. For example, to talk about companies, we provide Dialogflow with sentences such as "Tell me more about SpaceX" and annotate that SpaceX is an entity of the type "Company".
-
-<p align="center"> 
-<img width="800" height="600" src="static/img/SentimentAnalysisTraining.png">
-</p>
-
-If we provide enough training sentences, Dialogflow detects the sentiment correctly. We emphasize that the training set does not need to be extensive to detect the sentiment, take for example the following conversation:
-
-<p align="center"> 
-<img width="800" height="600" src="static/img/SentimentAnalysisChat.png">
-</p>
-
-Dialogflow can answer about Tesla even though the training sentence is "Tell me more about SpaceX". It can also generalize 
-sentiment analysis to words it has never seen. "Elucidate" never appeared in the training set, but our bot still answered the question
-correctly. Lastly, Sentiment Analysis is not only based on Entity Analysis: if we ask "I want to work at SpaceX", the bot detects
-a different intent and talks about the positions available.
-
-#### Synonym Recognition (2 points)
-
-By being able to recognize common synonyms used by the user, the bot is a able to respond to a wider variety of inputs. This enriches the user experience as they get a greater freedom when it comes to choosing how they phrase their question. This allows them to have a more natural conversation with the bot. As seen below, we are able to use 'red' in place of 'crimson' and the bot can still provide an accurate answer
-
-<p align="center"> 
-<img width="1252" height="214" src="static/img/synonym.png">
-</p>
-
-### Extra topics (0.5 points)
-
-We have expanded the topics Elon Musk bot can talk about. The current list is:
-
-* Crypto
-* Billionaire Tax
-* Tesla
-* SpaceX
-* Neuralink
-* Ukraine War **(new topic)**
-* Daily Routine **(new topic)**
-
-### Out of Scope Responses (0.5 points)
-
-We created an Out of Scope intent in Dialogflow. When Sentiment Analysis cannot match a sentence to an existing intent, we send one predefined response using Elon's sarcasm. Take a look at the example chat where we greet Elon in French and ask if he speaks French:
-
-<p align="center"> 
-<img width="800" height="300" src="static/img/OutOfScope.png">
-</p>
+### Feature A (5 points)
 
 
-### Github Repo with commit history
+### Feature B (5 points)
 
-Link to repo: https://github.com/cosc-310-group32/Assignment3/tree/main .
-The branch structure **as of 2022-03-17** can be found below. Each branch maps to one Pull Request, with `main` as the branch with working code.
-<p align="center"> 
-<img width="1223" height="448" src="static/img/branch.png">
-</p>
+
+
 
 ### Level 0 data flow diagram
 
