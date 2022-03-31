@@ -8,7 +8,7 @@ Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Mus
 
 ## Talking to the Bot
 
-The bot is available at https://t.me/COSC310_ElonMusk_Dialogflow_bot
+The bot is available at https://t.me/EloneMuskBot
 
 ## Executing Tests
 
