@@ -135,9 +135,11 @@ However, it also correctly recognised the word "Neuralnk" as referring to Neural
 
 ## Authors
 
-- [Kiet Phan](https://github.com/ketphan02)
+This assignment is an extension of the [team project](https://github.com/cosc-310-group32/Assignment3) from Assignment 3. Contributions before March 21, 2022 were made by the group.
+
 - [Ivan Carvalho](https://github.com/IvanIsCoding)
 - [Lydia Lin](https://github.com/yuqi88)
+- [Kiet Phan](https://github.com/ketphan02)
 - [Akshat Singal](https://github.com/aksingal-dev)
 - [Paula Wong-Chung](https://github.com/KafkaNoNeko)
 
