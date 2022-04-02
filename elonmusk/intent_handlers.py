@@ -1,5 +1,5 @@
+from twitter import *
 import random
-
 
 def handle_what_company_intent(query_result):
     """Returns list of text messages for the What Company Intent"""
@@ -290,3 +290,17 @@ def handle_stand_with_ukraine_intent(query_result):
             return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
+def handle_tweet_intent(query_result):
+    """Returns answer containing elements extracted from Elon's recent tweets"""
+    print(f"DEBUG: Tweet Intent")
+
+    try:
+        tweet = query_result["parameters"]["tweet"]
+
+        if tweet != "":
+            result = twitter_parse()
+            return [result]
+    except:
+        return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
