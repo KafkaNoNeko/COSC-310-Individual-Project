@@ -2,6 +2,8 @@
 from credentials import *
 import tweepy as tw
 import re
+import spacy
+import random as rd
 
 def find_hyperlink(text):
     """ Returns hyperlink if any
@@ -9,21 +11,36 @@ def find_hyperlink(text):
     """
     try: 
         link = re.search("(?P<url>https?://[^\s]+)", text).group("url")
+        link = link[:-1]    #remove the '
     except:
         link = ""
-    return link 
+    return link
 
 def extract_topic(text):
     """ Returns the topic of the tweet using NLP
-        
+        Analysis using POS Tagging (entity recognition does not seem to work too well)
     """
 
     try:
-        topic = "aaa"    
+        nlp = spacy.load("en_core_web_sm")
+        doc = nlp(text)
+
+        topic = ""
+        for np in doc.noun_chunks:
+            if (find_hyperlink(str(np)) != ""):         # ignore hyperlinks
+                continue 
+
+            if len(np) > len(topic):                    # keep longest chunk
+                topic = np
     
     except: 
-        topic = "aaa" 
+        topic = "things I find interesting or relevant"   
     return topic
+
+def choose_topic(topics):
+    """Randomly choose a topic from the list
+    """
+    return rd.choice(topics)
 
 def twitter_parse():
     """
@@ -46,13 +63,29 @@ def twitter_parse():
                                 )
 
        
-        result = ""
+        # analyse tweets 
+        topics = []                                             # for choosing best topic
+        topic_link = {}                                         # store topics and associated links if any
         for tweet in tweets[:50]:
             tweet = tweet._json['full_text'].encode('utf-8')    # need to encode to UTF-8 
-            tweet  = str(tweet)                                 # convert b'' to string
-            result = tweet              # for testing
+            tweet = str(tweet)[2:]                              # convert b'' to string
+            
+            tw_topic = extract_topic(tweet)
+            topics.append(tw_topic)
+            topic_link[tw_topic] = find_hyperlink(tweet)
 
-        # change this later
+        # choose topic (TO DO)
+        topic = choose_topic(topics)
+
+        # generate response
+        result = "I love Twitter. Recently, I've been tweeting about "
+        result = result + str(topic)
+        
+        # add link if any
+        link = topic_link[topic]
+        if (link != ""):
+            result = result + ". You can check out this link: " + link
+
         return result
 
     except:
