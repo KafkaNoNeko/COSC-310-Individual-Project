@@ -30,6 +30,9 @@ python -m unittest discover tests
     ├── elonmusk                        # Code for the Python back-end
     │   ├── main.py                     # Entrypoint for Cloud Function
     │   ├── intent_handlers.py          # Logic for each Intent (i.e. Topic) Elon can talk about
+    │   ├── map.py                      # Generates Google Map links
+    │   ├── twitter.py                  # Logic for parsing Elon's tweets and information retrieval
+    │   ├── credentials.py              # Stores credentials needed for the Twitter API
     ├── tests                           # Tests for the bot
     │   ├── data                        # Raw data from Dialogflow after Intent and Entity matching
     │   ├── mock_dialogflow_utils.py    # Utilities for writing tests
@@ -45,12 +48,12 @@ python -m unittest discover tests
     └── README.md                       # This file!
 ```
 
-## Features added in Assignment 3
+## Features added in the Individual Assignment
 
-### Feature A (5 points)
+### Map/Directions Generation using Google Maps (5 points)
 
 
-### Feature B (5 points)
+### Tweet Information Retrieval (5 points)
 
 
 
@@ -132,6 +135,9 @@ However, it also correctly recognised the word "Neuralnk" as referring to Neural
 * [Python](https://www.python.org/) - Back End
 * [Dialogflow](https://cloud.google.com/dialogflow/docs) - Natural Language Processing
 * [Telegram](https://telegram.org/) - User Interface
+* [Tweepy](https://docs.tweepy.org/en/stable/) - Retrieve Elon's tweets
+* [SpaCy](https://spacy.io/usage/spacy-101) - Parse Elon's tweets for information retrieval
+* [Google Maps](https://developers.google.com/maps/documentation/urls/get-started) - Map generation/Give directions
 
 ## Authors
 
