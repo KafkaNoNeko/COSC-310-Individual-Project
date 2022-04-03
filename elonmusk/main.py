@@ -23,6 +23,7 @@ def cloud_function(request):
         "Neuralink Applications Intent - custom": handle_NeuralinkAppIntent_followup,
         "Fight Putin Intent": handle_fight_putin_intent,
         "Stand With Ukraine Intent": handle_stand_with_ukraine_intent,
+        "Tweet Intent": handle_tweet_intent
     }
 
     try:
