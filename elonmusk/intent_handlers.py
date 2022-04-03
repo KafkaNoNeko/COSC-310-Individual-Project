@@ -1,4 +1,5 @@
 from twitter import *
+from map import *
 import random
 
 def handle_what_company_intent(query_result):
@@ -303,4 +304,17 @@ def handle_tweet_intent(query_result):
             return [result]
     except:
         return ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
+
+def handle_map_intent(query_result, text):
+    """Returns a map of the requested location"""
+    print(f"DEBUG: Map Intent")
+
+    try:
+        map_query = query_result["parameters"]["map"]
+
+        if map_query != "":
+            result = map_search(text)
+            return [result]
+    except:
+        return ["Oh, ambiguity! If you specify the location and append the word 'map', I might be more helpful..."]
 
