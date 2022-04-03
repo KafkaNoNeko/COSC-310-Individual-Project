@@ -32,13 +32,16 @@ def extract_topic(text):
 
             if len(np) > len(topic):                    # keep longest chunk
                 topic = np
+        
+        if (str(topic) == ""):                          # do not return blank topic
+            topic = "things I find interesting or relevant"
     
     except: 
         topic = "things I find interesting or relevant"   
     return topic
 
 def choose_topic(topics):
-    """Randomly choose a topic from the list
+    """Randomly choose a topic from the list 
     """
     return rd.choice(topics)
 
