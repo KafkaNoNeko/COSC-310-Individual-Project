@@ -23,7 +23,8 @@ def cloud_function(request):
         "Neuralink Applications Intent - custom": handle_NeuralinkAppIntent_followup,
         "Fight Putin Intent": handle_fight_putin_intent,
         "Stand With Ukraine Intent": handle_stand_with_ukraine_intent,
-        "Tweet Intent": handle_tweet_intent
+        "Tweet Intent": handle_tweet_intent,
+        "Map Intent": handle_map_intent
     }
 
     try:
@@ -31,7 +32,12 @@ def cloud_function(request):
         user_intent = query_result["intent"]["displayName"]
 
         if user_intent in intent_dictionary:
-            answer_list = intent_dictionary[user_intent](query_result)
+            if (user_intent == "Map Intent"):
+                user_text = query_result["queryText"]
+                answer_list = intent_dictionary[user_intent](query_result, user_text)
+            else: 
+                answer_list = intent_dictionary[user_intent](query_result)
+
         else:
             answer_list = ["My engineers are working on this right now - thanks for talking to Elon Musk Bot"]
     except:

@@ -1,5 +1,6 @@
 flask~=2.0
 tweepy
 regex
+urllib3
 spacy # DO NOT specify >=3.0.0,<4.0.0 - will lead to deployment error using cloud functions
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0-py3-none-any.whl
