@@ -56,7 +56,7 @@ def twitter_parse():
         api = tw.API(auth)
 
         tweets = api.user_timeline(screen_name=userid, 
-                                count=50,
+                                count=20,
                                 include_rts = False,     # no retweets
                                 exclude_replies=True,
                                 tweet_mode = 'extended'  # keep full text
@@ -66,7 +66,7 @@ def twitter_parse():
         # analyse tweets 
         topics = []                                             # for choosing best topic
         topic_link = {}                                         # store topics and associated links if any
-        for tweet in tweets[:50]:
+        for tweet in tweets[:20]:
             tweet = tweet._json['full_text'].encode('utf-8')    # need to encode to UTF-8 
             tweet = str(tweet)[2:]                              # convert b'' to string
             
@@ -74,7 +74,7 @@ def twitter_parse():
             topics.append(tw_topic)
             topic_link[tw_topic] = find_hyperlink(tweet)
 
-        # choose topic (TO DO)
+        # choose topic 
         topic = choose_topic(topics)
 
         # generate response
