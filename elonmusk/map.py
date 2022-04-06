@@ -5,7 +5,7 @@ def map_search(text):
     try: 
         # remove the word "map" and keep other keywords
         # this step is not really needed
-        query = text.lower().replace(" map", "")
+        #query = text.lower().replace(" map", "")
 
         # encode to url
         query_url = urllib.parse.quote(query)
