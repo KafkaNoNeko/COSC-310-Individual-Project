@@ -53,6 +53,8 @@ python -m unittest discover tests
 ### Map/Directions Generation using Google Maps (5 points)
 
 
+
+
 ### Tweet Information Retrieval (5 points)
 
 The bot is now able to talk about Elon's recent Tweet topics. It is also able to return associated hyperlinks (images, videos, other links..) if any.
@@ -85,6 +87,14 @@ Here, the determined topic and link to the content is returned.
 
 <p align="center"> 
 <img src="static/img/tweet_img_text.png">
+</p>
+
+### Misspellings
+
+After toggling on the "Automatic Spell Correction" option of Dialogflow, the bot is now able to provide the correct response in most cases when the user has misspellings in their message.
+
+<p align="center"> 
+<img src="static/img/misspell_indiv.png">
 </p>
 
 ### Level 0 data flow diagram
@@ -125,21 +135,6 @@ In this example, 'nostalgia on demand' (all lowercase) was defined as the keywor
 <img src="static/img/sample_out_lim1.png">
 </p>
 
-#### Limitation Sample output (2)
-
-At this moment, our bot does not handle misspellings correctly in all situations.
-
-When the word 'Tesla' is misspelt, the bot responds with an error message.
-
-<p align="center"> 
-<img src="static/img/sample_out_lim2.png">
-</p>
-
-However, it also correctly recognised the word "Neuralnk" as referring to Neuralink.
-
-<p align="center"> 
-<img src="static/img/sample_out_lim2c.png">
-</p>
 
 #### Other Limitations
 
