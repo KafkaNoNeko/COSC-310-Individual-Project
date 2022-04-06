@@ -1,4 +1,4 @@
-# Elon Musk Bot ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54) ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white) ![Dialogflow](https://img.shields.io/badge/Dialogflow-orange.svg?logo=dialogflow&logoColor=white)
+# Elon Musk Bot ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54) ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white) ![Dialogflow](https://img.shields.io/badge/Dialogflow-orange.svg?logo=dialogflow&logoColor=white)  ![Twitter](https://badges.aleen42.com/src/twitter.svg)
 
 <p align="center"> 
 <img width="620" height="414" src="static/img/ElonMusk.png">
@@ -55,8 +55,37 @@ python -m unittest discover tests
 
 ### Tweet Information Retrieval (5 points)
 
+The bot is now able to talk about Elon's recent Tweet topics. It is also able to return associated hyperlinks (images, videos, other links..) if any.
 
+[Tweepy](https://www.tweepy.org/) is used to access the Twitter API and to retrieve Elon's latest tweets.  These are then parsed to extract the topics using [SpaCy](https://spacy.io/usage/spacy-101) pretrained English NLP model which identifies "noun chunks" given a sentence. A simplifying assumption is made in this step: we assume that the longest chunk in a sentence will be more meaningful. Each tweet is also parsed for hyperlinks using regex matching and a dictionary of topics and related hyperlinks is created. Finally, a random topic is chosen by the bot.
 
+*Note:* This feature is affected by [cold starts](https://mikhail.io/serverless/coldstarts/gcp/).  It is possible for the bot to not return a response if the 'Twitter' intent is triggered too early. In addition, the tweet retrieval and analysis process can sometimes take longer than expected. This would lead to a Dialogflow ES timeout.  
+
+Here are some sample output along with Elon's associated tweet.
+
+1. Tweets containing only an image
+
+In this case, a default 'topic', i.e. "things I find interesting or relevant" is returned along with the hyperlink.
+
+<p align="center"> 
+<img src="static/img/tweet_img_only.png">
+</p>
+
+2. Tweets containing mainly text.
+
+In this case, the topic selected by SpaCy is returned.
+
+<p align="center"> 
+<img src="static/img/tweet_text.png">
+</p>
+
+3. Tweets containing both text and links.
+
+Here, the determined topic and link to the content is returned.
+
+<p align="center"> 
+<img src="static/img/tweet_img_text.png">
+</p>
 
 ### Level 0 data flow diagram
 
