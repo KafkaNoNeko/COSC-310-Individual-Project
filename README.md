@@ -52,7 +52,32 @@ python -m unittest discover tests
 
 ### Map/Directions Generation using Google Maps (5 points)
 
+The bot can now generate maps and provide directions based on user query.  This is triggered by the "Map Intent" and can be accessed at any moment during a conversation. 
 
+The feature leverages the Google Maps API's [Maps URLs](https://developers.google.com/maps/documentation/urls/get-started). The required parameters are extracted from the user query to create the URLs.
+
+Here are some examples:
+
+1. Requesting a map
+
+<p align="center"> 
+<img src="static/img/map_nodir.png">
+</p>
+
+Here, the keyword "map" indicates that a map is being requested.
+
+<p align="center"> 
+<img src="static/img/map_nodir2.png">
+</p>
+
+
+2. Asking for directions
+
+In this case, the keyword "directions" triggers Maps' directions function.
+
+<p align="center"> 
+<img src="static/img/map_dir.png">
+</p>
 
 
 ### Tweet Information Retrieval (5 points)
