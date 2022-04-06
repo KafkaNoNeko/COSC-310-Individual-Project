@@ -57,7 +57,7 @@ python -m unittest discover tests
 
 ### Tweet Information Retrieval (5 points)
 
-The bot is now able to talk about Elon's recent Tweet topics. It is also able to return associated hyperlinks (images, videos, other links..) if any.
+The bot is now able to talk about Elon's recent Tweet topics. It is also able to return associated hyperlinks (images, videos, other links..) if any. This new feature makes the conversation more dynamic by providing up-to-date information on Elon's Twitter activities.
 
 [Tweepy](https://www.tweepy.org/) is used to access the Twitter API and to retrieve Elon's latest tweets.  These are then parsed to extract the topics using [SpaCy](https://spacy.io/usage/spacy-101) pretrained English NLP model which identifies "noun chunks" given a sentence. A simplifying assumption is made in this step: we assume that the longest chunk in a sentence will be more meaningful. Each tweet is also parsed for hyperlinks using regex matching and a dictionary of topics and related hyperlinks is created. Finally, a random topic is chosen by the bot.
 
