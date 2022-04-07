@@ -122,19 +122,9 @@ After toggling on the "Automatic Spell Correction" option of Dialogflow, the bot
 <img src="static/img/misspell_indiv.png">
 </p>
 
-### Sample output and Limitations
+## Limitations
 
-#### Sample output (30 turns)
-
-Below is a sample output showcasing our new features: dealing with out-of-context responses, entity recognition, synonym recognition, sentiment analysis, and the addition of two new topics (Ukraine War and Elon's daily routine).
-
-<p align="center"> 
-<img src="static/img/sample_output_30.png">
-</p>
-
-#### Limitation Sample output (1)
-
-At this stage, our bot only recognises keywords when they match the case in which they were defined at training.
+1. At this stage, the bot only recognises keywords when they match the case in which they were defined at training.
 
 In this example, 'nostalgia on demand' (all lowercase) was defined as the keyword at training time. A user input with slightly different cases will result in a fallback message.
 
@@ -142,22 +132,19 @@ In this example, 'nostalgia on demand' (all lowercase) was defined as the keywor
 <img src="static/img/sample_out_lim1.png">
 </p>
 
-
-#### Other Limitations
-
-1. Our bot cannot handle several keywords in one query. In this case, the first keyword in the sentence will be used to generate the response.
+2. The bot cannot handle several keywords in one query. In this case, the first keyword in the sentence will be used to generate the response.
 
 <p align="center"> 
 <img src="static/img/sample_out_lim3.png">
 </p>
 
-2. Intents in Dialogflow can have follow-up intents. These follow-up intents cannot be detected unless the main intent is identified first. A 'lifespan' variable sets the number of turns during which the follow-up intent can be detected following a detection of a main intent. Hence, if a user sends a follow-up question in more turns than the number defined by the 'lifespan' variable, an error message will be returned.
+3. Intents in Dialogflow can have follow-up intents. These follow-up intents cannot be detected unless the main intent is identified first. A 'lifespan' variable sets the number of turns during which the follow-up intent can be detected following a detection of a main intent. Hence, if a user sends a follow-up question in more turns than the number defined by the 'lifespan' variable, an error message will be returned.
 
 ### Possible API Branches
 
 * Synonym recognition process
 * Entity recognition process
-* closest match to queston using processed query can be applied to any database.
+* closest match to question using processed query can be applied to any database.
 * Sentiment analysis.
 * Our dialogflow implementation can be plugged into most telegram bots with relative ease and can act as the backbone for other bots.
 
