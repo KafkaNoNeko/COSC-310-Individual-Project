@@ -122,24 +122,6 @@ After toggling on the "Automatic Spell Correction" option of Dialogflow, the bot
 <img src="static/img/misspell_indiv.png">
 </p>
 
-### Level 0 data flow diagram
-
-The Level 0 diagram can be found below:
-<p align="center"> 
-<img width="1480" height="421" src="static/img/lvl0DFD.png">
-</p>
-
-Explanation: When the user first connects to the bot they send a message to dialogflow which passes it on to the bot to start the session. Every question asked by the user is analysed by dialogflow and then parsed to the bot once it has been converted to its closest match on the database. The bot then returns the result based on the closest match and that result is sent over to the user through dialogflow.  
-
-### Level 1 data flow diagram
-
-The level 1 dataflow diagram can be found below:
-<p align="center"> 
-<img width="1635" height="960" src="static/img/lvl1DFD.png">
-</p>
-
-Explanation: When the user connects to dialogflow using telegram, they send a 'start bot' message that is passed on to the bot to start the session as a closest matched question. Every subsequent query is analysed for synonyms, sentiment, and entities while being processed and dialogflow finds the closest match to the processed query from the database of information that is available to the bot. This question is then sent to the bot which then looks up the answer and responds with the answer to the question. This answer is, in turn, displayed to the user on the telegram GUI.
-
 ### Sample output and Limitations
 
 #### Sample output (30 turns)
